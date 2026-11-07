@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Exposure and Gendered Jobs</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (~720px) like a statistical release; wide figures break out to 900px. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #18212b;
+  --muted: #5a6573;
+  --rule: #d9dee5;
+  --accent: #1f4e79;
+  --fem: #0e7469;
+  --male: #a8570a;
+  --non: #7a8494;
+  --pass: #1d7a3a;
+  --pass-bg: #e3f3e8;
+  --fail: #b42318;
+  --fail-bg: #fbe7e5;
+  --display: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11161c; --surface: #18202a; --ink: #e6eaef; --muted: #9aa5b3; --rule: #2c3644;
+    --accent: #8db8e3; --fem: #3cc7b4; --male: #f0a04b; --non: #8d97a6;
+    --pass: #6fd28d; --pass-bg: #173323; --fail: #ff8a7a; --fail-bg: #3a1b18;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11161c; --surface: #18202a; --ink: #e6eaef; --muted: #9aa5b3; --rule: #2c3644;
+  --accent: #8db8e3; --fem: #3cc7b4; --male: #f0a04b; --non: #8d97a6;
+  --pass: #6fd28d; --pass-bg: #173323; --fail: #ff8a7a; --fail-bg: #3a1b18;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 64px;
+}
+main { max-width: 900px; margin: 0 auto; display: grid; gap: 56px; }
+.col { max-width: 720px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 800; letter-spacing: -0.01em; }
+h2 { font-size: 24px; font-weight: 700; }
+h3 { font-size: 17px; font-weight: 700; }
+p { margin: 0; }
+.stack { display: grid; gap: 14px; }
+.eyebrow { font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.lede { font-size: 20px; line-height: 1.5; }
+.muted { color: var(--muted); }
+.small { font-size: 14px; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header.top { display: grid; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 28px; }
+.byline { font-family: var(--display); font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+
+.answer { background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--accent); padding: 20px 22px; display: grid; gap: 10px; }
+.answer strong { font-family: var(--display); }
+
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.fig { background: var(--surface); padding: 16px 18px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.fig .v { font-family: var(--mono); font-size: 26px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.fig .l { font-family: var(--display); font-size: 13px; color: var(--muted); line-height: 1.35; }
+
+.chart-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); padding: 18px 10px 10px; }
+.chart-wrap svg { display: block; width: 100%; min-width: 600px; height: auto; }
+svg text { font-family: var(--display); fill: var(--ink); }
+svg .axis { fill: var(--muted); font-family: var(--mono); font-size: 11px; }
+svg .grid { stroke: var(--rule); stroke-width: 1; }
+svg .zero { stroke: var(--muted); stroke-width: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 22px; font-family: var(--display); font-size: 13px; color: var(--muted); padding: 10px 12px 2px; }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.sw { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+
+.checks { display: grid; gap: 16px; }
+.check { background: var(--surface); border: 1px solid var(--rule); padding: 20px 22px; display: grid; gap: 12px; }
+.check-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.chip { font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 3px; }
+.chip.pass { color: var(--pass); background: var(--pass-bg); }
+.chip.fail { color: var(--fail); background: var(--fail-bg); }
+dl.kv { display: grid; grid-template-columns: 150px 1fr; gap: 6px 16px; margin: 0; font-size: 15px; }
+dl.kv dt { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--muted); padding-top: 2px; }
+dl.kv dd { margin: 0; min-width: 0; }
+@media (max-width: 560px) { dl.kv { grid-template-columns: 1fr; gap: 2px; } dl.kv dd { margin-bottom: 8px; } }
+
+.bars { display: grid; gap: 8px; }
+.bar-row { display: grid; grid-template-columns: 48px 1fr 70px; align-items: center; gap: 12px; font-size: 14px; }
+.bar-row .yr { font-family: var(--mono); color: var(--muted); }
+.bar-track { height: 18px; background: transparent; }
+.bar { height: 100%; background: var(--fem); }
+.bar-row .val { font-family: var(--mono); text-align: right; font-variant-numeric: tabular-nums; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { padding: 9px 14px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); background: var(--bg); }
+td.n, th.n { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+.neg { color: var(--fail); }
+.posv { color: var(--pass); }
+
+ul.plain { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+footer { border-top: 1px solid var(--rule); padding-top: 20px; font-size: 14px; color: var(--muted); display: grid; gap: 8px; }
+</style>
+</head>
+<body>
+
+<main>
+  <header class="top col">
+    <div class="eyebrow">POLISCI 158 · Implementation milestone findings</div>
+    <h1>Did generative AI hit female-dominated jobs harder?</h1>
+    <div class="byline"><span>Reed Marthers &amp; Yashita Singh</span><span>U.S. occupations, 2015–2025</span><span>Results as of Nov 7, 2026</span></div>
+  </header>
+
+  <section class="col stack">
+    <div class="answer">
+      <div class="eyebrow">Short answer</div>
+      <p class="lede"><strong>No evidence they fared worse.</strong> After 2022, growth in high-exposure female-dominated occupations moved up slightly. Growth in high-exposure male-dominated occupations slowed. The difference favors female-dominated jobs, but it is not statistically significant, and it does not survive every check.</p>
+    </div>
+    <p class="muted small">This is a descriptive comparison, not a causal estimate. The results come from the rebuilt analysis in the project repository (309 occupations), not from the original scripts.</p>
+  </section>
+
+  <section class="stack">
+    <h2 class="col">Key figures</h2>
+    <div class="figures">
+      <div class="fig"><span class="v">+2.45</span><span class="l">F − M gap in the change in growth, pp per year (SE 2.08, p = 0.24)</span></div>
+      <div class="fig"><span class="v">309</span><span class="l">harmonized occupations, BLS CPS Table 11</span></div>
+      <div class="fig"><span class="v">β ≥ 0.511</span><span class="l">high exposure: top 25% of GPT-4 β (Eloundou et al. 2024)</span></div>
+      <div class="fig"><span class="v">1 of 3</span><span class="l">checks passed against standards set in advance</span></div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <div class="col stack">
+      <h2>Growth before and after 2022</h2>
+      <p>Annual employment growth for each group, comparing 2015–19 with 2022–25. Gender groups use 2022 shares: female-dominated means more than 70% women, male-dominated means fewer than 30%.</p>
+    </div>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 660 370" role="img" aria-label="Dot plot of annual employment growth by group, 2015 to 2019 versus 2022 to 2025">
+        <!-- x scale: v in [-1, 3.5] -> 230 + (v + 1) * 88.89 -->
+        <g>
+          <line class="grid" x1="230" y1="30" x2="230" y2="340"/>
+          <line class="zero" x1="318.9" y1="30" x2="318.9" y2="340"/>
+          <line class="grid" x1="407.8" y1="30" x2="407.8" y2="340"/>
+          <line class="grid" x1="496.7" y1="30" x2="496.7" y2="340"/>
+          <line class="grid" x1="585.6" y1="30" x2="585.6" y2="340"/>
+          <text class="axis" x="230" y="360" text-anchor="middle">−1%</text>
+          <text class="axis" x="318.9" y="360" text-anchor="middle">0%</text>
+          <text class="axis" x="407.8" y="360" text-anchor="middle">+1%</text>
+          <text class="axis" x="496.7" y="360" text-anchor="middle">+2%</text>
+          <text class="axis" x="585.6" y="360" text-anchor="middle">+3%</text>
+        </g>
+        <text x="12" y="22" font-size="12" font-weight="700" letter-spacing="1" fill="var(--muted)" style="fill:var(--muted)">HIGH EXPOSURE</text>
+        <text x="12" y="192" font-size="12" font-weight="700" letter-spacing="1" style="fill:var(--muted)">LOWER EXPOSURE</text>
+
+        <!-- High F: -0.62 -> 0.07 -->
+        <text x="12" y="59" font-size="14" font-weight="700" style="fill:var(--fem)">Female-dominated</text>
+        <text x="12" y="75" font-size="11" style="fill:var(--muted)">21 occupations · 8.8M jobs</text>
+        <line x1="263.8" y1="62" x2="325.1" y2="62" stroke="var(--fem)" stroke-width="2.5" style="stroke:var(--fem)"/>
+        <circle cx="263.8" cy="62" r="6" fill="var(--surface)" stroke="var(--fem)" stroke-width="2.5" style="fill:var(--surface);stroke:var(--fem)"/>
+        <circle cx="325.1" cy="62" r="6.5" fill="var(--fem)" style="fill:var(--fem)"/>
+        <text class="axis" x="263.8" y="48" text-anchor="middle">−0.62</text>
+        <text class="axis" x="325.1" y="48" text-anchor="middle" style="fill:var(--ink)">+0.07</text>
+
+        <!-- High M: 2.76 -> 1.25 -->
+        <text x="12" y="107" font-size="14" font-weight="700" style="fill:var(--male)">Male-dominated</text>
+        <text x="12" y="123" font-size="11" style="fill:var(--muted)">19 occupations · 9.3M jobs</text>
+        <line x1="564.2" y1="110" x2="430.0" y2="110" stroke="var(--male)" stroke-width="2.5" style="stroke:var(--male)"/>
+        <circle cx="564.2" cy="110" r="6" fill="var(--surface)" stroke="var(--male)" stroke-width="2.5" style="fill:var(--surface);stroke:var(--male)"/>
+        <circle cx="430.0" cy="110" r="6.5" fill="var(--male)" style="fill:var(--male)"/>
+        <text class="axis" x="564.2" y="96" text-anchor="middle">+2.76</text>
+        <text class="axis" x="430.0" y="96" text-anchor="middle" style="fill:var(--ink)">+1.25</text>
+
+        <!-- High N: 2.05 -> 0.99 -->
+        <text x="12" y="155" font-size="14" font-weight="700" style="fill:var(--non)">Non-dominated</text>
+        <text x="12" y="171" font-size="11" style="fill:var(--muted)">38 occupations · 12.8M jobs</text>
+        <line x1="501.1" y1="158" x2="407.0" y2="158" stroke="var(--non)" stroke-width="2.5" style="stroke:var(--non)"/>
+        <circle cx="501.1" cy="158" r="6" fill="var(--surface)" stroke="var(--non)" stroke-width="2.5" style="fill:var(--surface);stroke:var(--non)"/>
+        <circle cx="407.0" cy="158" r="6.5" fill="var(--non)" style="fill:var(--non)"/>
+        <text class="axis" x="501.1" y="144" text-anchor="middle">+2.05</text>
+        <text class="axis" x="407.0" y="144" text-anchor="middle" style="fill:var(--ink)">+0.99</text>
+
+        <!-- Lower F: 1.85 -> 1.65 -->
+        <text x="12" y="229" font-size="14" font-weight="700" style="fill:var(--fem)">Female-dominated</text>
+        <text x="12" y="245" font-size="11" style="fill:var(--muted)">43 occupations · 29.3M jobs</text>
+        <line x1="483.3" y1="232" x2="465.6" y2="232" stroke="var(--fem)" stroke-width="2.5" style="stroke:var(--fem)"/>
+        <circle cx="483.3" cy="232" r="6" fill="var(--surface)" stroke="var(--fem)" stroke-width="2.5" style="fill:var(--surface);stroke:var(--fem)"/>
+        <circle cx="465.6" cy="232" r="6.5" fill="var(--fem)" style="fill:var(--fem)"/>
+        <text class="axis" x="497" y="236" text-anchor="start">+1.85</text>
+        <text class="axis" x="452" y="236" text-anchor="end" style="fill:var(--ink)">+1.65</text>
+
+        <!-- Lower M: 1.61 -> 0.55 -->
+        <text x="12" y="277" font-size="14" font-weight="700" style="fill:var(--male)">Male-dominated</text>
+        <text x="12" y="293" font-size="11" style="fill:var(--muted)">98 occupations · 37.1M jobs</text>
+        <line x1="462.0" y1="280" x2="367.8" y2="280" stroke="var(--male)" stroke-width="2.5" style="stroke:var(--male)"/>
+        <circle cx="462.0" cy="280" r="6" fill="var(--surface)" stroke="var(--male)" stroke-width="2.5" style="fill:var(--surface);stroke:var(--male)"/>
+        <circle cx="367.8" cy="280" r="6.5" fill="var(--male)" style="fill:var(--male)"/>
+        <text class="axis" x="462.0" y="266" text-anchor="middle">+1.61</text>
+        <text class="axis" x="367.8" y="266" text-anchor="middle" style="fill:var(--ink)">+0.55</text>
+
+        <!-- Lower N: 1.07 -> 0.59 -->
+        <text x="12" y="325" font-size="14" font-weight="700" style="fill:var(--non)">Non-dominated</text>
+        <text x="12" y="341" font-size="11" style="fill:var(--muted)">90 occupations · 50.7M jobs</text>
+        <line x1="414.1" y1="328" x2="371.4" y2="328" stroke="var(--non)" stroke-width="2.5" style="stroke:var(--non)"/>
+        <circle cx="414.1" cy="328" r="6" fill="var(--surface)" stroke="var(--non)" stroke-width="2.5" style="fill:var(--surface);stroke:var(--non)"/>
+        <circle cx="371.4" cy="328" r="6.5" fill="var(--non)" style="fill:var(--non)"/>
+        <text class="axis" x="428" y="332" text-anchor="start">+1.07</text>
+        <text class="axis" x="358" y="332" text-anchor="end" style="fill:var(--ink)">+0.59</text>
+      </svg>
+      <div class="legend">
+        <span><i class="sw" style="border:2px solid var(--muted);background:var(--surface)"></i>2015–19 growth per year</span>
+        <span><i class="sw" style="background:var(--muted)"></i>2022–25 growth per year</span>
+        <span>Jobs counted in 2022</span>
+      </div>
+    </div>
+    <div class="col stack">
+      <p>The high-exposure female-dominated group is mostly clerical work: secretaries, office clerks, receptionists, bookkeeping clerks. It was already shrinking before 2022. The biggest slowdown was in high-exposure male-dominated jobs, led by software developers, computer support and computer systems managers.</p>
+      <p>Across the high-exposure occupations, the female-dominated group's change in growth was <span class="num">2.45</span> points per year better than the male-dominated group's. The 95% interval runs from <span class="num">−1.70</span> to <span class="num">+6.60</span>, so the data cannot rule out no difference.</p>
+    </div>
+  </section>
+
+  <section class="stack">
+    <div class="col stack">
+      <h2>One occupation tells much of the story</h2>
+      <p>Secretaries and administrative assistants lost about a third of their jobs over the decade. Most of the decline happened before ChatGPT launched in late 2022.</p>
+    </div>
+    <div class="col bars" role="img" aria-label="Secretaries and administrative assistants employment, thousands: 2015 2870, 2019 2688, 2022 2279, 2024 2120, 2025 1881">
+      <div class="bar-row"><span class="yr">2015</span><div class="bar-track"><div class="bar" style="width:100%"></div></div><span class="val">2,870k</span></div>
+      <div class="bar-row"><span class="yr">2019</span><div class="bar-track"><div class="bar" style="width:93.7%"></div></div><span class="val">2,688k</span></div>
+      <div class="bar-row"><span class="yr">2022</span><div class="bar-track"><div class="bar" style="width:79.4%"></div></div><span class="val">2,279k</span></div>
+      <div class="bar-row"><span class="yr">2024</span><div class="bar-track"><div class="bar" style="width:73.9%"></div></div><span class="val">2,120k</span></div>
+      <div class="bar-row"><span class="yr">2025</span><div class="bar-track"><div class="bar" style="width:65.5%"></div></div><span class="val">1,881k</span></div>
+    </div>
+    <p class="col muted small">GPT-4 β = 0.65. 93% women in 2022. Combines the four 2018 Census secretary codes so 2015–19 and 2022–25 are comparable.</p>
+  </section>
+
+  <section class="stack">
+    <div class="col stack">
+      <h2>Checks</h2>
+      <p>Each check targets a specific weakness, with a pass standard written before the check was run on the rebuilt data. A failed check is reported as a finding.</p>
+    </div>
+    <div class="checks col">
+      <article class="check">
+        <div class="check-head"><h3>1. Human-rated exposure</h3><span class="chip fail">FAIL</span></div>
+        <dl class="kv">
+          <dt>Weak point</dt><dd>The result could depend on GPT-4's own exposure ratings.</dd>
+          <dt>Pass standard</dt><dd>Gap stays positive, and the 95% interval is not entirely below zero.</dd>
+          <dt>Result</dt><dd>Gap <span class="num">−0.06</span> pp/yr (SE 2.22, 95% CI <span class="num">−4.48</span> to <span class="num">+4.37</span>). Only 12 female-dominated occupations count as high exposure under human ratings. The gap is essentially zero, so it fails the "stays positive" part, but nothing points to female-dominated jobs doing worse.</dd>
+        </dl>
+      </article>
+      <article class="check">
+        <div class="check-head"><h3>2. 2019 baseline</h3><span class="chip fail">FAIL</span></div>
+        <dl class="kv">
+          <dt>Weak point</dt><dd>The 2022–25 growth could just be recovery from COVID.</dd>
+          <dt>Pass standard</dt><dd>High-exposure female-dominated employment in 2025 is at or above its 2019 level.</dd>
+          <dt>Result</dt><dd>9,371k in 2019, 8,774k in 2022, 8,792k in 2025: <span class="num neg">−6.2%</span> below 2019. Secretaries alone fell 807k. Without them, the rest of the group grew 3.4% (6,683k to 6,911k), but that is a diagnostic, not the standard.</dd>
+        </dl>
+      </article>
+      <article class="check">
+        <div class="check-head"><h3>3. Post-period ending 2024</h3><span class="chip pass">PASS</span></div>
+        <dl class="kv">
+          <dt>Weak point</dt><dd>2025 policy shocks could drive the post-period result.</dd>
+          <dt>Pass standard</dt><dd>Gap stays positive without 2025.</dd>
+          <dt>Result</dt><dd>Gap <span class="num posv">+2.59</span> pp/yr (SE 2.33, 95% CI <span class="num">−2.04</span> to <span class="num">+7.22</span>). Over 2022–24, high-exposure female-dominated jobs shrank 0.55% a year while male-dominated grew 0.71%; the gap stays positive because the male-dominated slowdown from 2015–19 was larger.</dd>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  <section class="stack">
+    <div class="col stack">
+      <h2>Where the 2019–2025 change came from</h2>
+      <p>The largest moves inside the high-exposure female-dominated group, in thousands of jobs.</p>
+    </div>
+    <div class="table-wrap col">
+      <table>
+        <thead><tr><th>Occupation</th><th class="n">2019</th><th class="n">2025</th><th class="n">Change</th></tr></thead>
+        <tbody>
+          <tr><td>Secretaries and administrative assistants</td><td class="n">2,688</td><td class="n">1,881</td><td class="n neg">−807</td></tr>
+          <tr><td>Tellers</td><td class="n">294</td><td class="n">224</td><td class="n neg">−70</td></tr>
+          <tr><td>Billing and posting clerks</td><td class="n">459</td><td class="n">403</td><td class="n neg">−56</td></tr>
+          <tr><td>Receptionists and information clerks</td><td class="n">1,288</td><td class="n">1,247</td><td class="n neg">−41</td></tr>
+          <tr><td>Office clerks, general</td><td class="n">1,355</td><td class="n">1,436</td><td class="n posv">+81</td></tr>
+          <tr><td>Bookkeeping, accounting, and auditing clerks</td><td class="n">1,015</td><td class="n">1,254</td><td class="n posv">+239</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="stack">
+    <div class="col stack">
+      <h2>Rebuild compared with the original analysis</h2>
+      <p>The original scripts were not available, so the analysis was rebuilt from public data with the same definitions. The direction of every result matches the original analysis, but the gap is smaller and less precise.</p>
+    </div>
+    <div class="table-wrap col">
+      <table>
+        <thead><tr><th>Measure</th><th class="n">Original</th><th class="n">Rebuild</th></tr></thead>
+        <tbody>
+          <tr><td>Occupations</td><td class="n">313</td><td class="n">309</td></tr>
+          <tr><td>High-exposure cutoff (GPT-4 β)</td><td class="n">0.51</td><td class="n">0.511</td></tr>
+          <tr><td>High-exposure female-dominated, growth 2015–19 → 2022–25</td><td class="n">−0.39 → +1.06</td><td class="n">−0.62 → +0.07</td></tr>
+          <tr><td>High-exposure male-dominated, growth 2015–19 → 2022–25</td><td class="n">+3.48 → +1.27</td><td class="n">+2.76 → +1.25</td></tr>
+          <tr><td>F − M gap, pp/yr</td><td class="n">+3.5 (SE 2.0)</td><td class="n">+2.45 (SE 2.08)</td></tr>
+          <tr><td>Check 1, human-rated exposure</td><td class="n">+1.2 (SE 2.4)</td><td class="n">−0.06 (SE 2.22)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="col muted small">The original analysis reports the female-dominated × high-exposure term as +2.9 and the male-dominated term as −0.6. The F − M gap is the difference between them: +3.5.</p>
+  </section>
+
+  <section class="col stack">
+    <h2>Rival explanations and limits</h2>
+    <ul class="plain">
+      <li><strong>Routine office work was already declining.</strong> Cortes et al. (2014) document routine jobs shrinking for decades, long before generative AI. The secretaries trend fits that pattern.</li>
+      <li><strong>The tech slowdown.</strong> Software job postings had already fallen sharply by ChatGPT's launch (Indeed via FRED), which could explain the male-dominated slowdown without AI.</li>
+      <li><strong>Small groups.</strong> Each high-exposure group has only 19–21 occupations, so single occupations move the totals.</li>
+      <li><strong>No age breakdown here.</strong> The Canaries study found its effect among workers aged 22–25. This table-level data cannot test that.</li>
+      <li><strong>Code changes.</strong> Two male-dominated tech occupations do not line up across the 2020 code change, so 2019 vs. 2025 levels are only compared for the female-dominated group.</li>
+    </ul>
+  </section>
+
+  <section class="col stack">
+    <h2>Method and data</h2>
+    <ul class="plain">
+      <li>BLS CPS Table 11 annual averages for 2015, 2019, 2022, 2024 and 2025: employment and % women by occupation.</li>
+      <li>Census 2018 occupation code list and 2010→2018 crosswalk, used to build comparable occupation units across the 2020 code change.</li>
+      <li>Eloundou et al. (2024) GPT-4 β exposure scores, averaged from O*NET occupations up to Census codes.</li>
+      <li>Growth is compound annual growth between endpoint years. The gap comes from a regression of each occupation's change in growth on its gender group, among high-exposure occupations, weighted by 2022 employment, with robust standard errors.</li>
+    </ul>
+  </section>
+
+  <footer class="col">
+    <p>Code, data and full output: <a href="https://github.com/yashitas4/AI-Policy" target="_blank" rel="noopener">github.com/yashitas4/AI-Policy</a> (see <span class="num">output/checks_summary.txt</span>).</p>
+    <p>Analysis rebuilt with Claude (Anthropic), November 2026. Figures in thousands of jobs unless noted.</p>
+  </footer>
+</main>
+</body>
+</html>
