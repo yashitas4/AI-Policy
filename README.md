@@ -25,9 +25,11 @@ BLS blocks scripted downloads, so the 2015–2024 values were read from the BLS 
 
 ## Method in brief
 
-- Table 11 titles are matched to Census codes. Codes linked by the 2010→2018 changes are grouped into harmonized units. This gives 291 units with exposure scores and published % women.
+- Table 11 titles are matched to Census codes. Codes linked by the 2010→2018 changes are grouped into harmonized units.
+  - Many-to-many "bridge" links are dropped, so unrelated jobs don't chain together. For example, software developers would otherwise merge with "managers, all other" through project management specialists.
+  - This gives 309 units with exposure scores and published % women.
 - **Gender groups** use 2022 % women: female-dominated means more than 70% women, male-dominated means fewer than 30%, and everything else is non-dominated.
-- **High exposure** means the top 25% of GPT-4 β scores (cutoff β ≥ 0.50).
+- **High exposure** means the top 25% of GPT-4 β scores (cutoff β ≥ 0.511).
 - **Growth** is compound annual growth: 2015–19 for the pre period, 2022–25 for the post period.
 - **Gap**: among high-exposure units, the change in growth for female-dominated units minus male-dominated units. This comes from a regression weighted by 2022 employment, with HC1 standard errors.
 

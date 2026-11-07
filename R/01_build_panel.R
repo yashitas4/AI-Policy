@@ -62,6 +62,15 @@ unchanged <- setdiff(c10$c10, ch$c10)
 unchanged <- unchanged[unchanged %in% s18$c18]
 edges <- unique(rbind(ch, data.frame(c10 = unchanged, c18 = unchanged)))
 
+# Drop many-to-many "bridge" links: a 2010 code that was split several ways AND feeds a
+# 2018 code that also draws from other 2010 codes. Keeping them chains unrelated jobs into one
+# unit (e.g. software developers -> project management specialists <- managers, all other).
+# Clean splits (one 2010 -> many 2018) and merges (many 2010 -> one 2018) are kept.
+n_dest <- table(edges$c10); n_src <- table(edges$c18)
+bridge <- n_dest[edges$c10] > 1 & n_src[edges$c18] > 1
+cat("Dropped", sum(bridge), "many-to-many crosswalk links\n")
+edges <- edges[!bridge, ]
+
 # Connected components = harmonized units
 nodes <- c(paste0("a", c10$c10), paste0("b", s18$c18))
 parent <- setNames(nodes, nodes)

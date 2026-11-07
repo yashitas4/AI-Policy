@@ -20,7 +20,7 @@
 "b0300","Architectural and engineering managers",1,110,154,202,201,197,13.3,1,0.442610837438424,0.330788177339901,TRUE
 "b0310","Food service managers",1,1192,1249,1153,1192,1159,46.3,1,0.416666666666667,0.395833333333333,TRUE
 "b0325","Funeral home managers",1,15,13,8,14,10,NA,0,0.428571428571429,0.535714285714286,FALSE
-"b1032","Entertainment and recreation managers + Personal service managers, all other + Managers, all other + Project management specialists + Business operations specialists, all other + Software developers + Software quality assurance analysts and testers + Web developers + Web and digital interface designers + Database administrators and architects + Computer occupations, all other",11,6817,8581,10320,11002,11255,33.6455594337793,0.999418604651163,0.61149246149107,0.476818804253752,TRUE
+"b0335","Entertainment and recreation managers",1,23,19,65,72,65,41.5,1,0.463235294117647,0.433823529411765,TRUE
 "b0340","Lodging managers",1,159,162,113,129,117,46.7,1,0.456521739130435,0.380434782608696,TRUE
 "b0350","Medical and health services managers",1,636,677,797,824,905,71.6,1,0.428571428571429,0.371428571428571,TRUE
 "b0360","Natural sciences managers",1,25,15,28,53,44,NA,0,0.530696798493409,0.486532543291535,FALSE
@@ -28,6 +28,7 @@
 "b0410","Property, real estate, and community association managers",1,685,780,835,790,790,50.3,1,0.443181818181818,0.431818181818182,TRUE
 "b0420","Social and community service managers",1,378,470,434,493,471,70.7,1,0.392857142857143,0.446428571428571,TRUE
 "b0425","Emergency management directors",1,10,7,22,18,27,NA,0,0.422222222222222,0.6,FALSE
+"b0440","Personal service managers, all other + Managers, all other",2,4315,5299,5563,5602,5655,36.1,0.998921445263347,0.491225143788499,0.465339831742578,TRUE
 "b0500","Agents and business managers of artists, performers, and athletes",1,46,47,39,42,60,NA,0,0.543478260869565,0.369565217391304,FALSE
 "b0510","Buyers and purchasing agents, farm products",1,10,16,4,9,10,NA,0,0.527777777777778,0.25,FALSE
 "b0520","Wholesale and retail buyers, except farm products",1,190,226,179,171,179,55.2,1,0.466666666666667,0.4,TRUE
@@ -43,22 +44,27 @@
 "b0725","Meeting, convention, and event planners",1,159,146,159,145,201,74.5,1,0.486486486486487,0.364864864864865,TRUE
 "b0726","Fundraisers",1,77,93,76,76,78,82.9,1,0.519230769230769,0.490384615384615,TRUE
 "b0735","Market research analysts and marketing specialists",1,261,369,455,632,542,57.9,1,0.524590163934426,0.542559899117276,TRUE
+"b0750","Business operations specialists, all other",1,213,269,409,717,595,59.8,1,0.582840766028136,0.537989933604626,TRUE
 "b0800","Accountants and auditors",1,1732,1964,1652,1778,1766,58.8,1,0.56,0.52,TRUE
 "b0810","Property appraisers and assessors",1,76,84,100,80,70,45.5,1,0.53125,0.517857142857143,TRUE
 "b0820","Budget analysts",1,44,51,48,49,67,NA,0,0.52,0.64,FALSE
 "b0830","Credit analysts",1,21,28,51,40,35,46.3,1,0.555555555555556,0.555555555555556,TRUE
-"b0960","Financial and investment analysts + Other financial specialists",2,393,402,474,538,537,43.2101265822785,1,0.478009289414863,0.516117472493179,TRUE
+"b0845","Financial and investment analysts",1,322,345,387,406,422,40.2,1,0.461538461538462,0.5,TRUE
 "b0850","Personal financial advisors",1,498,551,543,528,576,35.1,1,0.5,0.671052631578947,TRUE
 "b0860","Insurance underwriters",1,107,105,105,124,142,65.6,1,0.571428571428571,0.5,TRUE
 "b0900","Financial examiners",1,15,21,19,23,20,NA,0,0.5,0.575757575757576,FALSE
 "b0910","Credit counselors and loan officers",1,332,403,391,313,352,54.8,1,0.607954545454545,0.670454545454545,TRUE
 "b0930","Tax examiners and collectors, and revenue agents",1,58,53,71,45,52,57.9,1,0.580645161290323,0.67741935483871,TRUE
 "b0940","Tax preparers",1,109,97,98,113,134,61.6,1,0.625,0.625,TRUE
+"b0960","Other financial specialists",1,71,57,87,132,115,56.6,1,0.551276075485753,0.587812436342148,TRUE
 "b1005","Computer and information research scientists",1,24,24,41,36,29,NA,0,0.634615384615385,0.5,FALSE
 "b1006","Computer systems analysts",1,552,663,501,547,569,38.7,1,0.617424242424242,0.553475935828877,TRUE
 "b1007","Information security analysts",1,70,125,178,243,261,18,1,0.652173913043478,0.543478260869565,TRUE
 "b1010","Computer programmers",1,480,454,457,334,381,22.1,1,0.95,0.683333333333333,TRUE
+"b1021","Software developers",1,1353,1815,2085,2077,2254,21.5,1,0.868421052631579,0.447368421052632,TRUE
+"b1031","Web developers",1,204,193,79,54,66,21.9,1,0.932692307692308,0.634615384615385,TRUE
 "b1050","Computer support specialists",1,475,547,704,633,677,25.8,1,0.622863247863248,0.602564102564103,TRUE
+"b1065","Database administrators and architects",1,93,106,137,148,148,38.8,1,0.802920738131325,0.574897903474378,TRUE
 "b1105","Network and computer systems administrators",1,218,199,217,154,154,19.8,1,0.72972972972973,0.513513513513514,TRUE
 "b1106","Computer network architects",1,114,106,98,139,96,8.6,1,0.635222739361702,0.543301196808511,TRUE
 "b1200","Actuaries",1,21,33,30,36,32,NA,0,0.5,0.537037037037037,FALSE
@@ -85,6 +91,7 @@
 "b1520","Petroleum engineers",1,44,24,18,23,15,NA,0,0.527777777777778,0.430555555555556,FALSE
 "b1530","Engineers, all other",1,440,582,631,697,685,14.9,1,0.522649620027669,0.446173296732507,TRUE
 "b1545","Architectural and civil drafters + Other drafters",2,133,113,126,130,118,15.3,0.634920634920635,0.538829224361139,0.501984961588777,FALSE
+"b1551","Electrical and electronic engineering technologists and technicians",1,403,496,90,85,79,9.3,1,0.405660377358491,0.330188679245283,TRUE
 "b1560","Surveying and mapping technicians",1,65,53,83,53,52,11.3,1,0.5,0.51063829787234,TRUE
 "b1600","Agricultural and food scientists",1,25,37,19,23,27,NA,0,0.455511426978818,0.658061594202899,FALSE
 "b1610","Biological scientists",1,86,104,110,105,100,57.9,1,0.462992942239547,0.435096339430425,TRUE
@@ -105,9 +112,10 @@
 "b1900","Agricultural and food science technicians",1,25,20,42,52,55,NA,0,0.38343253968254,0.30952380952381,FALSE
 "b1910","Biological technicians",1,18,23,24,21,25,NA,0,0.416666666666667,0.266666666666667,FALSE
 "b1920","Chemical technicians",1,82,56,51,57,75,35.1,1,0.392857142857143,0.392857142857143,TRUE
-"b1970","Environmental science and geoscience technicians + Other life, physical, and social science technicians",2,224,172,335,358,402,51.9,0.955223880597015,0.419909177660905,0.371890112603353,TRUE
+"b1935","Environmental science and geoscience technicians",1,21,20,15,18,16,NA,0,0.448599819331527,0.419450090334237,FALSE
 "b1940","Nuclear technicians",1,3,3,7,6,3,NA,0,0.185064935064935,0.284090909090909,FALSE
 "b1950","Social science research assistants",1,4,1,5,6,7,NA,0,0.666666666666667,0.621212121212121,FALSE
+"b1970","Other life, physical, and social science technicians",1,203,152,320,340,386,51.9,1,0.418564303832594,0.369660738647218,TRUE
 "b2006","Substance abuse and behavioral disorder counselors + Educational, guidance, and career counselors and advisors + Marriage and family therapists + Mental health counselors + Rehabilitation counselors + Counselors, all other",6,802,927,1047,1046,1043,73.1861336032389,0.943648519579752,0.258929888155549,0.305374985818394,TRUE
 "b2014","Child, family, and school social workers + Healthcare social workers + Mental health and substance abuse social workers + Social workers, all other",4,765,823,916,897,834,81.075,0.973799126637555,0.295024131274131,0.365658783783784,TRUE
 "b2015","Probation officers and correctional treatment specialists",1,99,97,70,72,67,53.4,1,0.394736842105263,0.447368421052632,TRUE
@@ -121,15 +129,17 @@
 "b2110","Judges, magistrates, and other judicial workers",1,58,70,68,68,57,56.2,1,0.472222222222222,0.322373862696443,TRUE
 "b2145","Paralegals and legal assistants",1,400,444,445,428,486,83.2,1,0.525,0.45,TRUE
 "b2862","Title examiners, abstractors, and searchers + Legal support workers, all other + Court reporters and simultaneous captioners",3,172,193,216,192,199,63.004347826087,0.851851851851852,0.662464985994398,0.545868347338936,FALSE
-"b2545","Postsecondary teachers + Teaching assistants",2,2301,2385,2467,2508,2520,66.8037292257803,1,0.430458347155264,0.373686615914846,TRUE
+"b2205","Postsecondary teachers",1,1341,1386,1087,1072,1058,48.4,1,0.484515193338831,0.468517774476416,TRUE
 "b2300","Preschool and kindergarten teachers",1,695,655,645,624,644,97.4,1,0.230074719800747,0.302563304275633,TRUE
 "b2310","Elementary and middle school teachers",1,3152,3604,3336,3632,3511,79.7,1,0.327072514309541,0.330033399458364,TRUE
 "b2320","Secondary school teachers",1,1144,1015,1000,887,790,58.7,1,0.333333333333333,0.337301587301587,TRUE
 "b2330","Special education teachers",1,330,331,369,318,349,84.2,1,0.30802392052392,0.30953490953491,TRUE
 "b2360","Tutors + Other teachers and instructors",2,876,1017,973,1138,1183,62.2158273381295,1,0.438809330686711,0.324997984805433,TRUE
 "b2400","Archivists, curators, and museum technicians",1,53,48,70,77,78,63.4,1,0.412280701754386,0.418453541260559,TRUE
-"b2555","Librarians and media collections specialists + Other educational instruction and library workers",2,327,368,323,370,346,76.4894736842105,1,0.472326456954533,0.448078045678665,TRUE
+"b2435","Librarians and media collections specialists",1,166,179,168,180,195,82.2,1,0.535087719298246,0.5,TRUE
 "b2440","Library technicians",1,31,33,38,32,31,NA,0,0.567307692307692,0.528846153846154,FALSE
+"b2545","Teaching assistants",1,960,999,1380,1436,1462,81.3,1,0.387878787878788,0.298989898989899,TRUE
+"b2555","Other educational instruction and library workers",1,161,189,155,190,151,70.3,1,0.404301346801347,0.391801346801347,TRUE
 "b2600","Artists and related workers",1,222,248,324,318,302,49.2,1,0.427155172413793,0.360668103448276,TRUE
 "b2640","Commercial and industrial designers + Fashion designers + Floral designers + Graphic designers + Interior designers + Merchandise displayers and window trimmers + Other designers",7,899,983,947,969,934,57.5677200902935,0.93558606124604,0.430450209691311,0.366566254644363,TRUE
 "b2700","Actors",1,49,40,56,57,43,47.7,1,0.1875,0.15625,TRUE
@@ -138,15 +148,16 @@
 "b2740","Dancers and choreographers",1,19,23,22,17,18,NA,0,0.146130952380952,0.106547619047619,FALSE
 "b2752","Music directors and composers + Musicians and singers",2,202,202,210,215,225,25.7,0.785714285714286,0.472955347552555,0.164377781187663,FALSE
 "b2770","Disc jockeys, except radio + Entertainers and performers, sports and related workers, all other",2,41,50,69,62,80,NA,0,0.526315789473684,0.368421052631579,FALSE
-"b2865","Broadcast announcers and radio disc jockeys + Interpreters and translators + Media and communication workers, all other",3,139,176,143,150,138,76.9,0.657342657342657,0.838,0.784760869565217,FALSE
+"b2805","Broadcast announcers and radio disc jockeys",1,55,58,21,20,18,NA,0,0.65,0.5375,FALSE
 "b2810","News analysts, reporters, and journalists",1,68,93,88,73,86,48.4,1,0.65,0.633333333333333,TRUE
 "b2825","Public relations specialists",1,147,137,120,114,135,67,1,0.590909090909091,0.787878787878788,TRUE
 "b2830","Editors",1,160,147,104,132,113,66,1,0.647058823529412,0.647058823529412,TRUE
 "b2840","Technical writers",1,68,61,53,63,54,65.1,1,0.7,0.633333333333333,TRUE
 "b2850","Writers and authors",1,208,225,277,257,234,57.3,1,0.877136752136752,0.774216524216524,TRUE
-"b2970","Broadcast, sound, and lighting technicians + Media and communication equipment workers, all other + Communications equipment operators, all other",3,126,131,124,126,127,6.3,0.951612903225806,0.385871362433862,0.221453373015873,TRUE
+"b2861","Interpreters and translators",1,84,118,94,92,97,76.9,1,0.88,0.84,TRUE
 "b2910","Photographers",1,180,188,210,210,216,47.8,1,0.385416666666667,0.21875,TRUE
 "b2920","Television, video, and film camera operators and editors",1,64,60,111,133,129,17.3,1,0.476010101010101,0.327020202020202,TRUE
+"b2970","Media and communication equipment workers, all other",1,2,0,1,2,2,NA,0,NA,NA,FALSE
 "b3000","Chiropractors",1,75,61,57,55,66,25.5,1,0.454545454545455,0.318181818181818,TRUE
 "b3010","Dentists",1,196,162,140,169,192,36.6,1,0.158863636363636,0.148977272727273,TRUE
 "b3030","Dietitians and nutritionists",1,108,128,141,142,136,88,1,0.548780487804878,0.463414634146341,TRUE
@@ -174,10 +185,12 @@
 "b3310","Dental hygienists",1,177,208,217,214,203,96.3,1,0.1875,0.09375,TRUE
 "b3330","Cardiovascular technologists and technicians + Diagnostic medical sonographers + Radiologic technologists and technicians + Magnetic resonance imaging technologists + Nuclear medicine technologists and medical dosimetrists",5,322,398,442,522,565,71.3489130434783,0.832579185520362,0.351223128085707,0.26258138128207,FALSE
 "b3402","Emergency medical technicians + Paramedics",2,220,206,246,268,252,31.9060975609756,1,0.184633625182406,0.201362830936002,TRUE
-"b3545","Pharmacy technicians + Psychiatric technicians + Surgical technologists + Veterinary technologists and technicians + Dietetic technicians and ophthalmic medical technicians + Miscellaneous health technologists and technicians",6,743,862,901,988,961,80.0954495005549,1,0.282635037714754,0.274363108530101,TRUE
+"b3430","Pharmacy technicians + Psychiatric technicians + Surgical technologists + Veterinary technologists and technicians + Dietetic technicians and ophthalmic medical technicians",5,626,710,755,837,835,82.8598675496689,1,0.280097558618473,0.294231725797121,TRUE
 "b3500","Licensed practical and licensed vocational nurses",1,670,687,588,565,545,88.9,1,0.25,0.25,TRUE
-"b3550","Occupational health and safety specialists and technicians + Medical records specialists + Other healthcare practitioners and technical occupations",3,308,318,363,437,388,69.995041322314,1,0.500646035658161,0.474525086621031,TRUE
+"b3515","Medical records specialists",1,200,185,193,227,166,88.2,1,0.61764705882353,0.558823529411765,TRUE
 "b3520","Opticians, dispensing",1,52,49,46,49,50,NA,0,0.285714285714286,0.238095238095238,FALSE
+"b3545","Miscellaneous health technologists and technicians",1,117,152,146,151,126,65.8,1,0.295756933041416,0.171617861704069,TRUE
+"b1980","Occupational health and safety specialists and technicians",1,108,133,79,67,83,29.2,1,0.364583333333333,0.386904761904762,TRUE
 "b3605","Home health aides + Nursing assistants + Orderlies and psychiatric aides",3,2032,2086,1912,2091,2190,87.7563284518829,1,0.0928947631009985,0.103227439628532,TRUE
 "b3610","Occupational therapy assistants and aides",1,23,29,25,24,35,NA,0,0.254091300602929,0.153316106804479,FALSE
 "b3620","Physical therapist assistants and aides",1,68,101,77,99,130,71.7,1,0.167832167832168,0.127039627039627,TRUE
@@ -224,13 +237,13 @@
 "b4230","Maids and housekeeping cleaners",1,1510,1475,1364,1413,1392,88.1,1,0,0.0588235294117647,TRUE
 "b4240","Pest control workers",1,85,96,100,100,93,6,1,0.25,0.229166666666667,TRUE
 "b4255","Landscaping and groundskeeping workers + Tree trimmers and pruners + Other grounds maintenance workers",3,1349,1273,1335,1304,1240,7.2,0.986516853932584,0.0275448372461253,0.0275448372461253,TRUE
-"b9005","Supervisors of personal care and service workers + Supervisors of transportation and material moving workers",2,558,630,544,564,350,47.0588235294118,1,0.353660816204187,0.296204410669754,TRUE
+"b4330","Supervisors of personal care and service workers",1,168,211,232,242,48,77.8,1,0.404968821257387,0.346904230071199,TRUE
 "b4340","Animal trainers",1,54,63,66,63,55,67.6,1,0.103448275862069,0.137931034482759,TRUE
 "b4350","Animal caretakers",1,252,296,305,334,364,76.9,1,0.272727272727273,0.181818181818182,TRUE
 "b4400","Gambling services workers",1,89,93,74,93,97,41.5,1,0.202182952182952,0.18970893970894,TRUE
 "b4435","Other entertainment attendants and related workers",1,6,1,237,201,224,46.2,1,0.181283529785834,0.200261781713395,TRUE
 "b4420","Ushers, lobby attendants, and ticket takers",1,44,38,39,40,39,NA,0,0.142857142857143,0.2,FALSE
-"b4655","Embalmers, crematory operators, and funeral attendants + Personal care and service workers, all other",2,158,193,150,165,160,64.7,0.813333333333333,0.105558785529716,0.122839147286822,FALSE
+"b4461","Embalmers, crematory operators, and funeral attendants",1,9,15,28,19,13,NA,0,0.105558785529716,0.122839147286822,FALSE
 "b4465","Morticians, undertakers, and funeral arrangers",1,35,26,36,33,36,NA,0,0.162790697674419,0.0930232558139535,FALSE
 "b4500","Barbers",1,116,137,123,144,141,24.8,1,0.161764705882353,0.0735294117647059,TRUE
 "b4510","Hairdressers, hairstylists, and cosmetologists",1,707,803,720,726,747,93.1,1,0.0789473684210526,0.0526315789473684,TRUE
@@ -241,6 +254,7 @@
 "b3602","Personal care aides",1,1251,1458,1407,1667,1840,80.2,1,0.222222222222222,0.333333333333333,TRUE
 "b4622","Exercise trainers and group fitness instructors + Recreation workers",2,429,440,392,398,451,62.2147959183674,1,0.104745469616418,0.241221488595438,TRUE
 "b4640","Residential advisors",1,38,30,28,47,32,NA,0,0.24,0.28,FALSE
+"b4655","Personal care and service workers, all other",1,149,178,122,146,147,64.7,1,NA,NA,FALSE
 "b4700","First-line supervisors of retail sales workers",1,3245,3232,3081,3001,2977,45.2,1,0.486486486486487,0.405405405405405,TRUE
 "b4710","First-line supervisors of non-retail sales workers",1,1242,1247,1203,1141,1036,35.2,1,0.537037037037037,0.444444444444444,TRUE
 "b4720","Cashiers",1,3246,3164,2712,2569,2490,71.8,1,0.235603543743079,0.33499446290144,TRUE
@@ -262,6 +276,7 @@
 "b5000","First-line supervisors of office and administrative support workers",1,1474,1306,1199,1186,1382,67.9,1,0.489583333333333,0.53125,TRUE
 "b5010","Switchboard operators, including answering service",1,16,21,16,12,9,NA,0,0.629032258064516,0.483870967741935,FALSE
 "b5020","Telephone operators",1,34,42,26,16,26,NA,0,0.894736842105263,0.552631578947368,FALSE
+"b5040","Communications equipment operators, all other",1,5,12,5,7,4,NA,0,NA,NA,FALSE
 "b5100","Bill and account collectors",1,168,116,103,113,111,68.8,1,0.696428571428571,0.428571428571429,TRUE
 "b5110","Billing and posting clerks",1,473,459,463,392,403,87.6,1,0.773809523809524,0.416666666666667,TRUE
 "b5120","Bookkeeping, accounting, and auditing clerks",1,1182,1015,1132,1197,1254,85,1,0.802325581395349,0.313953488372093,TRUE
@@ -299,6 +314,7 @@
 "b9645","Stockers and order fillers",1,1529,1512,1722,1694,1696,37.5,1,0.181818181818182,0.190909090909091,TRUE
 "b5630","Weighers, measurers, checkers, and samplers, recordkeeping",1,72,66,59,69,91,42.5,1,0.293103448275862,0.275862068965517,TRUE
 "b5740","Executive secretaries and executive administrative assistants + Legal secretaries and administrative assistants + Medical secretaries and administrative assistants + Secretaries and administrative assistants, except legal, medical, and executive",4,2870,2688,2279,2120,1881,92.9103896103896,0.979815708644142,0.646470174059029,0.591473367416764,TRUE
+"b1108","Computer occupations, all other",1,69,72,969,1188,1181,26,1,0.735786186333217,0.596963672503599,TRUE
 "b5810","Data entry keyers",1,281,250,237,226,229,69.8,1,0.892857142857143,0.5,TRUE
 "b5820","Word processors and typists",1,103,57,35,43,62,NA,0,0.743243243243243,0.486486486486487,FALSE
 "b5830","Desktop publishers",1,1,0,1,1,1,NA,0,0.645161290322581,0.483870967741935,FALSE
@@ -347,9 +363,11 @@
 "b6750","Septic tank servicers and sewer pipe cleaners",1,12,8,6,11,12,NA,0,0.078125,0.09375,FALSE
 "b6765","Miscellaneous construction and related workers",1,32,32,32,34,19,NA,0,0.120833333333333,0.141666666666667,FALSE
 "b6800","Derrick, rotary drill, and service unit operators, oil and gas",1,34,29,26,20,21,NA,0,0.0390492359932088,0.057159026598755,FALSE
-"b6835","Earth drillers, except oil and gas + Explosives workers, ordnance handling experts, and blasters",2,38,30,34,48,34,NA,0,0.13616867201426,0.11383132798574,FALSE
-"b6821","Excavating and loading machine and dragline operators, surface mining + Underground mining machine operators + Other extraction workers + Conveyor, dredge, and hoist and winch operators + Other material moving workers",5,127,106,170,176,197,10.3047619047619,0.61764705882353,0.0552736553751517,0.080825891219734,FALSE
+"b6825","Earth drillers, except oil and gas",1,29,22,27,37,25,NA,0,0.136363636363636,0.113636363636364,FALSE
+"b6835","Explosives workers, ordnance handling experts, and blasters",1,9,8,7,11,9,NA,0,0.135416666666667,0.114583333333333,FALSE
+"b6850","Underground mining machine operators",1,3,3,33,29,36,NA,0,0.00775193798449612,0.0471317829457364,FALSE
 "b6920","Roustabouts, oil and gas",1,9,8,10,7,8,NA,0,0,0,FALSE
+"b6950","Other extraction workers",1,4,2,50,47,46,2.5,1,0.0407589084905412,0.056936049485883,TRUE
 "b7000","First-line supervisors of mechanics, installers, and repairers",1,262,272,245,272,285,5.3,1,0.41025641025641,0.269230769230769,TRUE
 "b7010","Computer, automated teller, and office machine repairers",1,241,184,177,125,132,10.4,1,0.36734693877551,0.204081632653061,TRUE
 "b7020","Radio and telecommunications equipment installers and repairers",1,158,131,112,100,140,13.8,1,0.194196428571429,0.143229166666667,TRUE
@@ -398,7 +416,7 @@
 "b7840","Food batchmakers",1,101,82,94,98,93,58.1,1,0.115384615384615,0.153846153846154,TRUE
 "b7850","Food cooking machine operators and tenders",1,13,3,13,13,15,NA,0,0.129032258064516,0.032258064516129,FALSE
 "b7855","Food processing workers, all other",1,135,147,142,133,119,36.4,1,NA,NA,FALSE
-"b8990","Computer numerically controlled tool operators and programmers + Other production workers",2,1033,1249,1324,1385,1363,27.8983383685801,1,0.173870525796716,0.0871124147063194,TRUE
+"b7905","Computer numerically controlled tool operators and programmers",1,88,108,78,91,77,10.3,1,0.526785714285714,0.268571428571429,TRUE
 "b7925","Forming machine setters, operators, and tenders, metal and plastic",1,9,13,30,22,16,NA,0,0.079656862745098,0.0661764705882353,FALSE
 "b7950","Cutting, punching, and press machine setters, operators, and tenders, metal and plastic",1,82,70,60,52,53,13.7,1,0.01,0.02,TRUE
 "b8025","Other machine tool setters, operators, and tenders, metal and plastic",1,5,6,13,7,3,NA,0,0.101497758452152,0.0371479421579533,FALSE
@@ -441,6 +459,7 @@
 "b8800","Packaging and filling machine operators and tenders",1,250,262,304,278,242,52.5,1,0,0.075,TRUE
 "b8810","Painting workers",1,151,171,173,162,173,14.5,1,0.0217391304347826,0.0201406649616368,TRUE
 "b8830","Photographic process workers and processing machine operators",1,33,13,14,32,24,NA,0,0.38,0.17,FALSE
+"b8990","Other production workers",1,1,0,1246,1294,1286,29,1,0.151777921701899,0.0757530221850685,FALSE
 "b8850","Adhesive bonding machine operators and tenders",1,11,10,4,7,7,NA,0,0.0645161290322581,0,FALSE
 "b8865","Other production equipment operators and tenders",1,4,2,6,4,4,NA,0,0.070655517010937,0.0314213932137372,FALSE
 "b8910","Etchers and engravers",1,19,8,2,2,6,NA,0,0.136363636363636,0.0303030303030303,FALSE
@@ -448,23 +467,29 @@
 "b8930","Paper goods machine setters, operators, and tenders",1,30,24,20,12,14,NA,0,0,0.0263157894736842,FALSE
 "b8940","Tire builders",1,10,8,9,7,14,NA,0,0.0192307692307692,0,FALSE
 "b8950","Helpers--production workers",1,40,54,65,64,68,31,1,0.0888888888888889,0.0555555555555556,TRUE
+"b9005","Supervisors of transportation and material moving workers",1,205,206,312,322,302,24.2,1,0.315508709882576,0.258504544960988,TRUE
 "b9030","Aircraft pilots and flight engineers",1,140,141,187,213,201,9.2,1,0.295454545454545,0.221590909090909,TRUE
 "b9040","Air traffic controllers and airfield operations specialists",1,30,43,35,35,40,NA,0,0.353381374722838,0.318043237250554,FALSE
 "b9050","Flight attendants",1,86,110,116,129,129,69.9,1,0.166666666666667,0.145833333333333,TRUE
 "b9110","Ambulance drivers and attendants, except emergency medical technicians",1,19,15,15,23,17,NA,0,0.0909090909090909,0.0454545454545455,FALSE
-"b9142","Bus drivers, school + Bus drivers, transit and intercity + Shuttle drivers and chauffeurs + Taxi drivers",4,996,1336,1009,1065,1135,29.3333002973241,1,0.280062026186975,0.207049077159262,TRUE
+"b9122","Bus drivers, school + Bus drivers, transit and intercity",2,550,546,495,472,478,45.9121212121212,1,0.282553200853854,0.171618142206377,TRUE
 "b9130","Driver/sales workers and truck drivers",1,3469,3608,3539,3578,3583,8.1,1,0.325854700854701,0.187321937321937,TRUE
+"b9142","Taxi drivers",1,446,790,455,514,575,13,1,0.28125,0.25,TRUE
 "b9150","Motor vehicle operators, all other",1,51,66,193,231,144,28.5,1,NA,NA,FALSE
-"b9265","Locomotive engineers and operators + Other rail transportation workers",2,56,44,70,60,59,3.8,0.742857142857143,0.251205936920223,0.14556586270872,FALSE
+"b9210","Locomotive engineers and operators",1,50,42,52,41,33,3.8,1,0.24512987012987,0.14448051948052,TRUE
+"b9265","Other rail transportation workers",1,6,2,18,19,26,NA,0,0.268759018759019,0.148701298701299,FALSE
 "b9240","Railroad conductors and yardmasters",1,52,52,38,51,56,NA,0,0.277777777777778,0.208333333333333,FALSE
 "b9300","Sailors and marine oilers",1,11,19,25,21,19,NA,0,0.0425531914893617,0.0106382978723404,FALSE
 "b9310","Ship and boat captains and operators",1,35,45,41,44,46,NA,0,0.131818181818182,0.169061583577713,FALSE
 "b9330","Ship engineers",1,6,5,6,3,3,NA,0,0.171875,0.140625,FALSE
-"b9430","Transportation service attendants + Other transportation workers",2,147,126,138,120,139,17.5,0.659420289855073,0.174427382977658,0.117700527710655,FALSE
+"b9430","Other transportation workers",1,5,0,47,45,47,NA,0,0.251420251016524,0.174887786471637,FALSE
 "b9350","Parking attendants",1,91,83,68,54,76,14.6,1,0.107142857142857,0.125,TRUE
+"b9365","Transportation service attendants",1,99,88,91,75,92,17.5,1,0.134661835748792,0.0881642512077295,TRUE
 "b9410","Transportation inspectors",1,29,42,44,40,44,NA,0,0.412575757575758,0.234393939393939,FALSE
 "b9415","Passenger attendants",1,22,43,21,30,37,NA,0,0.222222222222222,0.138888888888889,FALSE
+"b9570","Conveyor, dredge, and hoist and winch operators",1,13,11,29,31,34,NA,0,0.109454848523756,0.084939661925908,FALSE
 "b9510","Crane and tower operators",1,76,63,60,53,59,0.7,1,0.184210526315789,0.0263157894736842,TRUE
+"b6821","Excavating and loading machine and dragline operators, surface mining",1,35,28,3,4,4,NA,0,0,0,FALSE
 "b9600","Industrial truck and tractor operators",1,589,571,636,602,640,10.5,1,0.03125,0.03125,TRUE
 "b9610","Cleaners of vehicles and equipment",1,338,344,350,371,396,18.9,1,0.0833333333333333,0,TRUE
 "b9620","Laborers and freight, stock, and material movers, hand",1,1908,2235,2244,2286,2203,22.4,1,0.0417391304347826,0.0408695652173913,TRUE
@@ -472,3 +497,4 @@
 "b9640","Packers and packagers, hand",1,505,628,719,661,582,52.9,1,0.1,0.1,TRUE
 "b9650","Pumping station operators",1,23,16,19,19,14,NA,0,0.173076923076923,0.0811965811965812,FALSE
 "b9720","Refuse and recyclable material collectors",1,97,99,112,104,127,10.6,1,0.196428571428571,0.232142857142857,TRUE
+"b9760","Other material moving workers",1,5,6,55,65,77,17.4,1,0.0714285714285714,0.125,TRUE

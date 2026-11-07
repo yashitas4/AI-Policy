@@ -1,18 +1,18 @@
-Sample: 291 harmonized occupations. High-exposure cutoff: GPT-4 beta >= 0.500 (human beta >= 0.472).
+Sample: 309 harmonized occupations. High-exposure cutoff: GPT-4 beta >= 0.511 (human beta >= 0.474).
 
 === BASELINE (GPT-4 beta, post = 2022-25) ===
-F - M gap = +2.52 pp/yr (SE 1.93, p = 0.196, 95% CI -1.32 to +6.35; high-exposure n: F=18, M=18, N=42)
+F - M gap = +2.45 pp/yr (SE 2.08, p = 0.244, 95% CI -1.70 to +6.60; high-exposure n: F=21, M=19, N=38)
 Example - secretaries unit: 2870 k (2015), 2688 k (2019), 2279 k (2022), 1881 k (2025)
 
 === CHECK 1: human-rated exposure (rebuilt) ===
-F - M gap = +0.80 pp/yr (SE 2.13, p = 0.708, 95% CI -3.45 to +5.04; high-exposure n: F=9, M=15, N=49)
-Standard: gap > 0 and 95% CI not entirely below zero -> PASS
+F - M gap = -0.06 pp/yr (SE 2.22, p = 0.979, 95% CI -4.48 to +4.37; high-exposure n: F=12, M=16, N=50)
+Standard: gap > 0 and 95% CI not entirely below zero -> FAIL
 
 === CHECK 2: 2019 baseline (COVID rebound) ===
-High-exposure female-dominated (18 occupations): 2019 = 8889 k, 2022 = 8319 k, 2025 = 8334 k (2025 vs 2019: -6.2%)
+High-exposure female-dominated (21 occupations): 2019 = 9371 k, 2022 = 8774 k, 2025 = 8792 k (2025 vs 2019: -6.2%)
 Standard: 2025 level at or above 2019 -> FAIL
-Diagnostic only (not the pass standard): same group without the secretaries unit: 2019 = 6201 k, 2025 = 6453 k (+4.1%)
-For comparison, high-exposure male-dominated (18 occupations): 2019 = 7414 k, 2025 = 8037 k (+8.4%)
+Diagnostic only (not the pass standard): same group without the secretaries unit: 2019 = 6683 k, 2025 = 6911 k (+3.4%)
+For comparison, high-exposure male-dominated (19 occupations): 2019 = 7820 k, 2025 = 9615 k (+23.0%)
 Largest contributors to the high-exposure female-dominated change, 2019-2025 (k):
                                                         title e2019 e2025  chg
  Executive secretaries and executive administrative assistant  2688  1881 -807
@@ -24,5 +24,5 @@ Largest contributors to the high-exposure female-dominated change, 2019-2025 (k)
                  Bookkeeping, accounting, and auditing clerks  1015  1254  239
 
 === CHECK 3: post-period ends 2024 (drop 2025) ===
-F - M gap = +2.63 pp/yr (SE 1.63, p = 0.110, 95% CI -0.61 to +5.87; high-exposure n: F=18, M=18, N=42)
+F - M gap = +2.59 pp/yr (SE 2.33, p = 0.269, 95% CI -2.04 to +7.22; high-exposure n: F=21, M=19, N=38)
 Standard: gap stays positive -> PASS
