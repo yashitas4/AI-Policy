@@ -86,9 +86,9 @@ say("Standard: 2025 level at or above 2019 -> %s", ifelse(sum(hf$e2025) >= sum(h
 hx <- hf[!grepl("^Executive secretaries", hf$title), ]
 say("Diagnostic only (not the pass standard): same group without the secretaries unit: 2019 = %d k, 2025 = %d k (%+.1f%%)",
     sum(hx$e2019), sum(hx$e2025), 100 * (sum(hx$e2025) / sum(hx$e2019) - 1))
-hm <- U[U$high & U$gender == "M", ]
-say("For comparison, high-exposure male-dominated (%d occupations): 2019 = %d k, 2025 = %d k (%+.1f%%)",
-    nrow(hm), sum(hm$e2019), sum(hm$e2025), 100 * (sum(hm$e2025) / sum(hm$e2019) - 1))
+# No male-dominated comparison here: two high-exposure male-dominated units (computer occupations,
+# all other; web developers) are not comparable across the 2019 -> 2022 code change, so their
+# 2019 -> 2025 levels would mislead. Growth rates elsewhere are measured within one code system.
 hf$chg <- hf$e2025 - hf$e2019
 say("Largest contributors to the high-exposure female-dominated change, 2019-2025 (k):")
 o <- hf[order(hf$chg), c("title", "e2019", "e2025", "chg")]; o$title <- substr(o$title, 1, 60)

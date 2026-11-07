@@ -12,7 +12,6 @@ Standard: gap > 0 and 95% CI not entirely below zero -> FAIL
 High-exposure female-dominated (21 occupations): 2019 = 9371 k, 2022 = 8774 k, 2025 = 8792 k (2025 vs 2019: -6.2%)
 Standard: 2025 level at or above 2019 -> FAIL
 Diagnostic only (not the pass standard): same group without the secretaries unit: 2019 = 6683 k, 2025 = 6911 k (+3.4%)
-For comparison, high-exposure male-dominated (19 occupations): 2019 = 7820 k, 2025 = 9615 k (+23.0%)
 Largest contributors to the high-exposure female-dominated change, 2019-2025 (k):
                                                         title e2019 e2025  chg
  Executive secretaries and executive administrative assistant  2688  1881 -807
