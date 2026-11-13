@@ -1,0 +1,41 @@
+"group","soc_major","major_group","occupation","emp2022_k","pct_women_2022","beta_gpt4"
+"HEF","13","Business and financial operations","Fundraisers",76,82.9,0.519
+"HEF","23","Legal","Paralegals and legal assistants",445,83.2,0.525
+"HEF","25","Educational instruction and library","Librarians and media collections specialists",168,82.2,0.535
+"HEF","27","Arts, design, entertainment, sports, and media","Interpreters and translators",94,76.9,0.88
+"HEF","29","Healthcare practitioners and technical","Medical records specialists",193,88.2,0.618
+"HEF","29","Healthcare practitioners and technical","Dietitians and nutritionists",141,88,0.549
+"HEF","41","Sales and related","Travel agents",71,81.9,0.562
+"HEF","43","Office and administrative support","Executive secretaries and executive administrative assistants + Legal secretaries and administrative assistants + Medical secretaries and administrative assistants + Secretaries and administrative assistants, except legal, medical, and executive",2279,92.9103896103896,0.646
+"HEF","43","Office and administrative support","Office clerks, general",1256,84.3,0.576
+"HEF","43","Office and administrative support","Receptionists and information clerks",1171,90.3,0.533
+"HEF","43","Office and administrative support","Bookkeeping, accounting, and auditing clerks",1132,85,0.802
+"HEF","43","Office and administrative support","Billing and posting clerks",463,87.6,0.774
+"HEF","43","Office and administrative support","Insurance claims and policy processing clerks",314,84.7,0.833
+"HEF","43","Office and administrative support","Tellers",218,83.1,0.542
+"HEF","43","Office and administrative support","Interviewers, except eligibility and loan",171,78,0.672
+"HEF","43","Office and administrative support","File Clerks",127,78.6,0.794
+"HEF","43","Office and administrative support","Payroll and timekeeping clerks",126,92.4,0.838
+"HEF","43","Office and administrative support","Human resources assistants, except payroll and timekeeping",89,89.1,0.621
+"HEF","43","Office and administrative support","Court, municipal, and license clerks",84,83.8,0.7
+"HEF","43","Office and administrative support","Eligibility interviewers, government programs",80,75,0.68
+"HEF","43","Office and administrative support","Library assistants, clerical",76,78.5,0.534
+"HEM","11","Management","Computer and information systems managers",764,26.4,0.53
+"HEM","15","Computer and mathematical","Software developers",2085,21.5,0.868
+"HEM","15","Computer and mathematical","Computer occupations, all other",969,26,0.736
+"HEM","15","Computer and mathematical","Computer support specialists",704,25.8,0.623
+"HEM","15","Computer and mathematical","Computer programmers",457,22.1,0.95
+"HEM","15","Computer and mathematical","Network and computer systems administrators",217,19.8,0.73
+"HEM","15","Computer and mathematical","Information security analysts",178,18,0.652
+"HEM","15","Computer and mathematical","Computer network architects",98,8.6,0.635
+"HEM","15","Computer and mathematical","Web developers",79,21.9,0.933
+"HEM","17","Architecture and engineering","Engineers, all other",631,14.9,0.523
+"HEM","17","Architecture and engineering","Mechanical engineers",403,8.5,0.531
+"HEM","17","Architecture and engineering","Electrical and electronics engineers",296,8.1,0.591
+"HEM","17","Architecture and engineering","Industrial engineers, including health and safety",221,25,0.529
+"HEM","17","Architecture and engineering","Aerospace engineers",173,17.4,0.571
+"HEM","17","Architecture and engineering","Computer hardware engineers",90,15.7,0.727
+"HEM","41","Sales and related","Sales representatives, wholesale and manufacturing",1155,28.7,0.56
+"HEM","41","Sales and related","Sales representatives of services, except advertising, insurance, financial services, and travel",615,29,0.633
+"HEM","41","Sales and related","Sales engineers",51,8.1,0.511
+"HEM","51","Production","Computer numerically controlled tool operators and programmers",78,10.3,0.527
