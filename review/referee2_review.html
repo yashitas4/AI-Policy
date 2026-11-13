@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Milestone Referee Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, a summary strip, three numbered threats (ranked), then a ledger-style number check. */
+:root {
+  --bg: #f7f8f9;
+  --surface: #ffffff;
+  --ink: #16202a;
+  --muted: #56616c;
+  --rule: #dde2e7;
+  --accent: #2f5d8a;
+  --ok: #2c7a4b;
+  --ok-bg: #e5f3ea;
+  --bad: #b23b2e;
+  --bad-bg: #fbe9e6;
+  --warn: #8a6214;
+  --warn-bg: #f8efd9;
+  --font-display: "Literata", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11161b; --surface: #182029; --ink: #e6ebf0; --muted: #9aa6b2; --rule: #2a3540;
+    --accent: #8db8e3; --ok: #7fd1a0; --ok-bg: #173225; --bad: #f19a8e; --bad-bg: #3a1d19;
+    --warn: #e5c27a; --warn-bg: #352a14; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11161b; --surface: #182029; --ink: #e6ebf0; --muted: #9aa6b2; --rule: #2a3540;
+  --accent: #8db8e3; --ok: #7fd1a0; --ok-bg: #173225; --bad: #f19a8e; --bad-bg: #3a1d19;
+  --warn: #e5c27a; --warn-bg: #352a14; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 780px; margin: 0 auto; padding-block: 48px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 40px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 650; text-wrap: balance; margin: 0; line-height: 1.25; }
+h1 { font-size: 2.1rem; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.12rem; }
+p { margin: 0; }
+.eyebrow { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+header { display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--rule); padding-bottom: 28px; }
+.lede { color: var(--muted); max-width: 65ch; }
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 0.92em; }
+section { display: flex; flex-direction: column; gap: 16px; }
+.claim { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; }
+.summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.stat { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; }
+.stat b { font-family: var(--font-mono); font-size: 1.6rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.stat.ok b { color: var(--ok); } .stat.bad b { color: var(--bad); } .stat.warn b { color: var(--warn); }
+.stat span { font-size: 0.88rem; color: var(--muted); }
+.threat { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 0 14px; border-top: 1px solid var(--rule); padding-top: 20px; }
+.threat .rank { font-family: var(--font-display); font-size: 1.6rem; color: var(--accent); line-height: 1.2; }
+.threat .body { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.threat ul { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 4px; }
+.fix { font-size: 0.92rem; color: var(--muted); border-left: 3px solid var(--rule); padding-left: 12px; }
+.fix strong { color: var(--ink); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+th { font-size: 0.74rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--bg); }
+td:first-child { min-width: 14rem; }
+.pill { display: inline-block; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.pill.ok { color: var(--ok); background: var(--ok-bg); }
+.pill.bad { color: var(--bad); background: var(--bad-bg); }
+.pill.warn { color: var(--warn); background: var(--warn-bg); }
+.notes { display: flex; flex-direction: column; gap: 10px; }
+.notes p { padding-left: 14px; border-left: 3px solid var(--warn); }
+footer { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 20px; display: flex; flex-direction: column; gap: 6px; }
+code { font-family: var(--font-mono); font-size: 0.88em; background: var(--bg); border: 1px solid var(--rule); border-radius: 4px; padding: 0 4px; overflow-wrap: anywhere; }
+@media (max-width: 560px) {
+  h1 { font-size: 1.7rem; }
+  .summary { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">POLISCI 158 · Referee review · Project Implementation Milestone</div>
+    <h1>AI exposure and employment in female- vs. male-dominated occupations</h1>
+    <p class="lede">A review of the milestone PDF against the four R scripts in the AI-Policy repository. All four scripts were re-run on a clean copy, and they reproduce every committed file in <code>output/</code> and <code>data/derived/</code> exactly. No analysis scripts or data were changed.</p>
+  </header>
+
+  <section>
+    <div class="claim">
+      <div class="eyebrow">Claim under review</div>
+      <p>After 2022 there is no reliable evidence that high-exposure female-dominated (HEF) occupations did worse than high-exposure male-dominated (HEM) ones, and the post-2022 pattern continues the pre-AI trend. Rebuilt baseline gap: <span class="num">+2.45 pp/yr</span> (95% CI <span class="num">−1.70</span> to <span class="num">+6.60</span>).</p>
+    </div>
+    <div class="summary">
+      <div class="stat ok"><b>7</b><span>PDF figures match script output</span></div>
+      <div class="stat bad"><b>6</b><span>PDF figures disagree with the scripts</span></div>
+      <div class="stat warn"><b>11</b><span>PDF figures no script in the repo produces</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Three biggest threats to the claim</h2>
+
+    <div class="threat">
+      <div class="rank">1</div>
+      <div class="body">
+        <h3>The gender comparison is really a clerical-vs-tech comparison</h3>
+        <p><code>04_within_group_gap.R</code> shows HEF and HEM occupations share only one SOC major group (Sales, 4 occupations). 13 of the 19 HEM units are computer or engineering jobs. HEF is mostly office and administrative work.</p>
+        <ul>
+          <li>The gap therefore measures office work against the tech cycle, and gender cannot be separated from occupation family.</li>
+          <li>The second named rival, the tech slowdown, sits inside the comparison group itself. A positive gap could mean tech cooled, not that female-dominated jobs held up.</li>
+          <li>None of the three pre-set checks addresses this rival.</li>
+        </ul>
+        <p class="fix"><strong>Suggested response:</strong> say plainly that the design compares occupation families, and add a check that drops or separately reports the computer occupations in HEM.</p>
+      </div>
+    </div>
+
+    <div class="threat">
+      <div class="rank">2</div>
+      <div class="body">
+        <h3>Half the gap also appears among low-exposure jobs, and the stated baseline isn't in the code</h3>
+        <p>Page 1 says “low-exposure groups serve as the baseline,” and the memo calls the gap “relative to lower-exposure jobs.” <code>gap_reg</code> in <code>02_analysis_and_checks.R</code> only compares F with M inside the high-exposure group.</p>
+        <ul>
+          <li>Among lower-exposure jobs, the F − M gap is <span class="num">+1.22</span> (SE <span class="num">0.93</span>).</li>
+          <li>Netting that out gives a triple difference of <span class="num">+1.23</span> (SE <span class="num">2.27</span>), half the headline <span class="num">+2.45</span>.</li>
+          <li>With Check 1 (human-rated exposure gives <span class="num">−0.06</span>), little of the gap is specific to GPT-4 exposure.</li>
+        </ul>
+        <p class="fix"><strong>Suggested response:</strong> either add the low-exposure comparison to the method and report it, or remove the baseline sentence.</p>
+      </div>
+    </div>
+
+    <div class="threat">
+      <div class="rank">3</div>
+      <div class="body">
+        <h3>Pre and post periods measure different workers in some HEM units</h3>
+        <p>Pre-period growth (2015–19) is computed on 2010 Census codes and post-period growth (2022–25) on 2018 codes.</p>
+        <ul>
+          <li>“Computer occupations, all other” goes from <span class="num">72k</span> (2019) to <span class="num">969k</span> (2022). “Web developers” goes from <span class="num">193k</span> to <span class="num">79k</span>. Both are reclassification.</li>
+          <li>These units pass the “complete on both sides” filter because dropping bridge links leaves their 2018 codes absorbing workers from outside the unit.</li>
+          <li>The regression weights units by 2022 employment, which inflates the first unit about 13×. Dropping it moves the gap from <span class="num">+2.45</span> to <span class="num">+3.36</span>.</li>
+          <li>Leave-one-out is reassuring on sign: the gap ranges from <span class="num">+1.43</span> to <span class="num">+4.17</span> and never turns negative.</li>
+        </ul>
+        <p class="fix"><strong>Suggested response:</strong> flag or drop units whose size jumps across the code change, and weight by a pre-period size as a robustness check.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Number check: PDF vs. script output</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>PDF says</th><th>Scripts give</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>309 harmonized units; cutoff β ≥ 0.511</td><td class="num">309; 0.511</td><td><span class="pill ok">Match</span></td></tr>
+          <tr><td>Rebuild gap +2.45, 95% CI −1.70 to +6.60</td><td class="num">+2.45 (−1.70, +6.60), p = 0.244</td><td><span class="pill ok">Match</span></td></tr>
+          <tr><td>Check 1: −0.06 (CI −4.48 to +4.37)</td><td class="num">−0.06 (−4.48, +4.37)</td><td><span class="pill ok">Match</span></td></tr>
+          <tr><td>Check 2: −6.2%, 9.37M → 8.79M</td><td class="num">9,371k → 8,792k, −6.2%</td><td><span class="pill ok">Match</span></td></tr>
+          <tr><td>Check 2 driven by secretaries, −807k</td><td class="num">−807k</td><td><span class="pill ok">Match</span></td></tr>
+          <tr><td>Check 3: +2.59</td><td class="num">+2.59</td><td><span class="pill ok">Match</span></td></tr>
+          <tr><td>Secretaries 2.87M → 2.28M → 1.88M</td><td class="num">2,870k → 2,279k → 1,881k</td><td><span class="pill ok">Match</span></td></tr>
+          <tr><td>22 HEF occupations, 9.4M jobs</td><td class="num">21 occupations; 8.77M (2022). 9.37M is the 2019 total</td><td><span class="pill bad">Mismatch</span></td></tr>
+          <tr><td>17 HEM occupations, 9.2M jobs</td><td class="num">19 occupations; 9.26M (2022)</td><td><span class="pill bad">Mismatch</span></td></tr>
+          <tr><td>HEF growth −0.39% → +1.06%/yr</td><td class="num">−0.62% → +0.07%</td><td><span class="pill bad">Mismatch</span></td></tr>
+          <tr><td>HEM growth +3.48% → +1.27%/yr</td><td class="num">+2.76% → +1.25%</td><td><span class="pill bad">Mismatch</span></td></tr>
+          <tr><td>HEFs declined “~4% per year” relative to HEMs, 2015–19</td><td class="num">≈3.4 pp/yr (CAGR −0.62 vs +2.76; log trend −0.84 vs +2.51)</td><td><span class="pill bad">Mismatch</span></td></tr>
+          <tr><td>Check 1 pass standard: “interval ≥ zero”</td><td>Script tests “CI not entirely below zero.” Read literally, the PDF wording would fail the baseline too.</td><td><span class="pill bad">Wording</span></td></tr>
+          <tr><td>Gap +3.5 (SE 2.0, p = 0.08; CI ≈ −0.5 to +7.5)</td><td>Not produced by any script</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>Positive across all 14 alternative definitions</td><td>No alternative-definition script in the repo</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>“Nine R scripts”</td><td>The repo has four</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>Check 1 original: +1.2 (SE 2.4)</td><td>Not produced by any script</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>IPUMS: 26–34 HEM +5.7% → −0.2%/yr</td><td>No IPUMS data or code in the repo</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>IPUMS: ages 22–25 HEF +5.8% since 2022</td><td>No IPUMS data or code in the repo</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>IPUMS: gender shares r = 0.9998; 7.35M records</td><td>No IPUMS data or code in the repo</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>Ages 22–25 intervals about −11 to +11 pp/yr</td><td>No IPUMS data or code in the repo</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>Ruled out a trend-adjusted decline larger than ~5%</td><td>Not produced by any script</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>Event study relative to 2022</td><td><code>03_annual_gap.R</code> gives annual and detrended gaps, but no event-study regression with intervals</td><td><span class="pill warn">Untraceable</span></td></tr>
+          <tr><td>Month-by-month 22–25 breakdown</td><td>Not in the repo</td><td><span class="pill warn">Untraceable</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lede">The untraceable figures come from the earlier analysis. Pages 1–2 lead with them, and they mix with the rebuild's 309 units. The memo on page 11 of the same PDF recommends dropping them because nobody can reproduce them. The Indeed postings figure (233.8 → 142.5) is an outside source and was not checked.</p>
+  </section>
+
+  <section>
+    <h2>Other problems to fix before submitting</h2>
+    <div class="notes">
+      <p><strong>Pages 4–14 look like pasted chat transcripts</strong>, not milestone text. They include a passage saying no <code>.R</code> files existed on the machine, which sits awkwardly next to the AI-use note's “nine-script analysis.” Check what was meant to be submitted.</p>
+      <p><strong>Fixed in the repo:</strong> the README said the data were “checked byte for byte (SHA-256) against the values on the BLS pages,” which a browser check can't do. It now states what was verified (2022 in all 595 rows, 2024 spot-checked) and that the other years still need hand-checks.</p>
+      <p><strong>Fixed in the repo:</strong> the README's run instructions listed only scripts 01 and 02, and its data table left out the 2016–18 and 2020–23 files. Both now cover all four scripts and every input.</p>
+      <p><strong>Still open:</strong> the milestone PDF itself (the number mismatches, the untraceable figures and pages 4–14) isn't in the repo, so those fixes are yours to make.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Method: scripts 01–04 re-run in R on a clean copy of commit <span class="num">8f91a6e</span>; outputs compared file by file. Diagnostics (leave-one-out, low-exposure comparison, triple difference) used the same sample, cutoffs, CAGR definitions, 2022 employment weights and HC1 standard errors as <code>02_analysis_and_checks.R</code>.</p>
+    <p>Prepared with Claude Code, November 13, 2026.</p>
+  </footer>
+</div>
+</body>
+</html>
