@@ -8,14 +8,18 @@
 #   04_within_group_gap.R     -> output/hef_hem_occupations.csv, within_group_gap.txt
 #   05_numbers.R              -> output/numbers.csv (every number cited in the paper)
 #   06_triple_difference.R    -> output/triple_difference.csv, adds ddd_* rows to numbers.csv
+#   07_codechange_robustness.R-> output/codechange_*.csv, adds check4_* rows to numbers.csv
+#   08_tech_confound.R        -> output/tech_confound.csv, hef_hem_by_major_group.csv, adds check5_*
+#                                and majgrp_* rows to numbers.csv
 #
-# 03-06 read files written by earlier scripts (06 must follow 05), so the order matters. Each script runs in its
+# 03-08 read files written by earlier scripts (06-08 must follow 05), so the order matters. Each script runs in its
 # own environment, so objects from one script cannot leak into the next.
 
 if (!file.exists("R/01_build_panel.R")) stop("Run from the repository root (the folder that contains R/).")
 
 scripts <- c("R/01_build_panel.R", "R/02_analysis_and_checks.R", "R/03_annual_gap.R",
-             "R/04_within_group_gap.R", "R/05_numbers.R", "R/06_triple_difference.R")
+             "R/04_within_group_gap.R", "R/05_numbers.R", "R/06_triple_difference.R",
+             "R/07_codechange_robustness.R", "R/08_tech_confound.R")
 
 for (f in scripts) {
   cat("\n==================== ", f, " ====================\n", sep = "")
