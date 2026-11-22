@@ -13,15 +13,17 @@
 #                                and majgrp_* rows to numbers.csv
 #   09_education_split.R      -> output/education_shares.csv, education_split.csv, adds edu_* rows
 #                                (needs BLS EP Table 5.3 xlsx in data/raw/bls/)
+#   10_annual_gap_ci.R        -> output/annual_gap_ci.csv, annual_gap_ci.png (bootstrap CIs on 03), adds annual_* rows
 #
-# 03-09 read files written by earlier scripts (06-09 must follow 05), so the order matters. Each script runs in its
+# 03-10 read files written by earlier scripts (06-10 must follow 05), so the order matters. Each script runs in its
 # own environment, so objects from one script cannot leak into the next.
 
 if (!file.exists("R/01_build_panel.R")) stop("Run from the repository root (the folder that contains R/).")
 
 scripts <- c("R/01_build_panel.R", "R/02_analysis_and_checks.R", "R/03_annual_gap.R",
              "R/04_within_group_gap.R", "R/05_numbers.R", "R/06_triple_difference.R",
-             "R/07_codechange_robustness.R", "R/08_tech_confound.R", "R/09_education_split.R")
+             "R/07_codechange_robustness.R", "R/08_tech_confound.R", "R/09_education_split.R",
+             "R/10_annual_gap_ci.R")
 
 for (f in scripts) {
   cat("\n==================== ", f, " ====================\n", sep = "")
