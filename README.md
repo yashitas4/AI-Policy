@@ -11,9 +11,12 @@ source("R/01_build_panel.R")          # -> data/derived/panel_units.csv
 source("R/02_analysis_and_checks.R")  # -> output/*.csv, output/checks_summary.txt
 source("R/03_annual_gap.R")           # -> output/annual_gap.csv, output/annual_gap*.png
 source("R/04_within_group_gap.R")     # -> output/hef_hem_occupations.csv, output/within_group_gap.txt
+source("R/05_numbers.R")              # -> output/numbers.csv (every number cited in the paper)
+source("R/06_triple_difference.R")    # -> output/triple_difference.csv, adds rows to numbers.csv
+source("R/07_codechange_robustness.R") # -> output/codechange_robustness.csv, adds rows to numbers.csv
 ```
 
-Run them in this order: 03 and 04 read `data/derived/` files written by 01.
+Run them in this order, or run everything with `source("R/00_run_all.R")`. Later scripts read files written by earlier ones.
 
 ## Data (`data/raw`)
 
@@ -38,6 +41,17 @@ BLS blocks scripted downloads, so the 2015–2024 values were read from the BLS 
 - **High exposure** means the top 25% of GPT-4 β scores (cutoff β ≥ 0.511).
 - **Growth** is compound annual growth: 2015–19 for the pre period, 2022–25 for the post period.
 - **Gap**: among high-exposure units, the change in growth for female-dominated units minus male-dominated units. This comes from a regression weighted by 2022 employment, with HC1 standard errors.
+
+## Check 4: code-change robustness (pass standard written 2026-11-22, before running)
+
+Pre-period growth uses 2010 Census codes and post-period growth uses 2018 codes. Some units change size across the switch by reclassification. For example, "Computer occupations, all other" goes from 72k in 2019 to 969k in 2022.
+
+- **Flag:** a harmonized unit in the analysis sample is flagged if its employment changes by more than 50% between 2019 and 2022, in either direction (|E2022 / E2019 − 1| > 0.5).
+- **Re-estimate 1:** the main gap without the flagged units. The gender groups and the high-exposure cutoff (β ≥ 0.511) stay as in the baseline.
+- **Re-estimate 2:** the main gap on the full sample, weighted by 2019 employment instead of 2022.
+- **Pass standard:** the F − M gap stays positive in both re-estimates. If either is ≤ 0, the check fails.
+
+Script: `R/07_codechange_robustness.R`.
 
 ## Note
 
