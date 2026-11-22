@@ -7,3 +7,6 @@ data/raw/ipums/*
 .Rhistory
 .RData
 .Rproj.user/
+
+# macOS Finder metadata
+.DS_Store
