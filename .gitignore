@@ -1,0 +1,9 @@
+# IPUMS CPS raw extracts (microdata and codebooks) stay local: IPUMS terms of use, and size.
+# Derived, aggregated tables built from them can be committed.
+data/raw/ipums/*
+!data/raw/ipums/README.md
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
