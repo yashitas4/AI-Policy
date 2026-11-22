@@ -38,7 +38,7 @@ Run in this order. Later scripts read files written by earlier ones.
 | `13_ipums_build.R` | IPUMS employment by unit × year × sex × degree × age band | `data/derived/ipums_unit_year_sex_deg_age.csv` |
 | `14_ipums_education_gap.R` | Gap for workers with and without a bachelor's degree; survey responses behind each cell | `output/ipums_education_gap.csv`, `ipums_education_cells.csv` |
 | `15_pew_reconcile.R` | Compares our result with Pew Research Center (Oct 2026); rebuilds Pew's O*NET exposure index | `output/pew_reconcile.txt`, `data/derived/pew_exposure_units.csv` |
-| `16_figures.R` | Three 16:9 slide/paper figures from the outputs above | `output/figures/fig1-3*.png` |
+| `16_figures.R` | Five 16:9 slide/paper figures from the outputs above (growth before/after, annual gap, composition, Pew windows, summary of all estimates and checks) | `output/figures/fig1-5*.png` |
 
 Scripts 05–10, 12, 14 and 15 also add rows to `output/numbers.csv`.
 

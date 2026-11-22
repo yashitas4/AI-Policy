@@ -23,7 +23,7 @@
 #   14_ipums_education_gap.R  -> output/ipums_education_gap.csv, ipums_education_cells.csv, adds deg_* rows
 #   15_pew_reconcile.R        -> output/pew_reconcile.txt, data/derived/pew_exposure_units.csv, adds pew* rows
 #                                (needs data/raw/onet/Work Activities.txt, O*NET 30.3)
-#   16_figures.R              -> output/figures/fig1-3 *.png (slide/paper figures from existing outputs)
+#   16_figures.R              -> output/figures/fig1-5 *.png (slide/paper figures from existing outputs)
 #
 # 03-16 read files written by earlier scripts (06-16 must follow 05; 14 and 15 follow 12), so the order matters. Each script runs in its
 # own environment, so objects from one script cannot leak into the next.
