@@ -10,3 +10,6 @@ data/raw/ipums/*
 
 # macOS Finder metadata
 .DS_Store
+
+# Default R graphics output (created when plotting without an open device)
+Rplots.pdf
