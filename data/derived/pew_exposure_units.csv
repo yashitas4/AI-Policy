@@ -1,0 +1,310 @@
+"unit","title","gender","eloundou","pew"
+"b0010","Chief executives","M",0.507777777777778,2.96003472222222
+"b0020","General and operations managers","N",0.480769230769231,2.54458333333333
+"b0040","Advertising and promotions managers","N",0.476744186046512,2.45416666666667
+"b0052","Marketing managers + Sales managers","N",0.47684124386252,3.04577366339334
+"b0060","Public relations and fundraising managers","N",0.55625,2.65743055555556
+"b0102","Administrative services managers + Facilities managers","N",0.397075462416371,1.75168297558923
+"b0110","Computer and information systems managers","M",0.53030303030303,2.74430555555556
+"b0120","Financial managers","N",0.485055230669266,3.1980787037037
+"b0136","Human resources managers","F",0.48,2.95784722222222
+"b0137","Training and development managers","N",0.5,3.46013888888889
+"b0140","Industrial production managers","M",0.4057187015029,1.90930555555556
+"b0150","Purchasing managers","N",0.585714285714286,2.93861111111111
+"b0160","Transportation, storage, and distribution managers","M",0.486525974025974,2.41993055555556
+"b0205","Farmers, ranchers, and other agricultural managers","M",0.36734693877551,1.24013888888889
+"b0220","Construction managers","M",0.444444444444444,1.66520833333333
+"b0230","Education and childcare administrators","N",0.441985402808574,2.53571759259259
+"b0300","Architectural and engineering managers","M",0.442610837438424,2.4725
+"b0310","Food service managers","N",0.416666666666667,1.34263888888889
+"b0335","Entertainment and recreation managers","N",0.463235294117647,2.01159722222222
+"b0340","Lodging managers","N",0.456521739130435,1.86534722222222
+"b0350","Medical and health services managers","F",0.428571428571429,2.71916666666667
+"b0410","Property, real estate, and community association managers","N",0.443181818181818,2.41583333333333
+"b0420","Social and community service managers","F",0.392857142857143,2.45541666666667
+"b0440","Personal service managers, all other + Managers, all other","N",0.491225143788499,2.43547669872371
+"b0520","Wholesale and retail buyers, except farm products","N",0.466666666666667,2.14715277777778
+"b0530","Purchasing agents, except wholesale, retail, and farm products","N",0.473684210526316,2.88381944444444
+"b0540","Claims adjusters, appraisers, examiners, and investigators","N",0.51,2.22611111111111
+"b0565","Compliance officers","N",0.526304274931043,2.44218253968254
+"b0600","Cost estimators","M",0.5,3.23604166666667
+"b0630","Human resources workers","F",0.444823799540781,2.16412037037037
+"b0640","Compensation, benefits, and job analysis specialists","N",0.473684210526316,2.93131944444445
+"b0650","Training and development specialists","N",0.552631578947368,2.87520833333333
+"b0700","Logisticians","N",0.527860531832726,2.76675925925926
+"b0710","Management analysts","N",0.404761904761905,3.27090277777778
+"b0725","Meeting, convention, and event planners","F",0.486486486486487,1.77888888888889
+"b0726","Fundraisers","F",0.519230769230769,2.90111111111111
+"b0735","Market research analysts and marketing specialists","N",0.524590163934426,3.51361111111111
+"b0750","Business operations specialists, all other","N",0.582840766028136,2.76072916666667
+"b0800","Accountants and auditors","N",0.56,3.08798611111111
+"b0810","Property appraisers and assessors","N",0.53125,2.40458333333333
+"b0830","Credit analysts","N",0.555555555555556,3.12840277777778
+"b0845","Financial and investment analysts","N",0.461538461538462,3.25479166666667
+"b0850","Personal financial advisors","N",0.5,3.37243055555556
+"b0860","Insurance underwriters","N",0.571428571428571,3.13715277777778
+"b0910","Credit counselors and loan officers","N",0.607954545454545,2.73954861111111
+"b0930","Tax examiners and collectors, and revenue agents","N",0.580645161290323,2.56840277777778
+"b0940","Tax preparers","N",0.625,2.61902777777778
+"b0960","Other financial specialists","N",0.551276075485753,2.87732638888889
+"b1006","Computer systems analysts","N",0.617424242424242,2.65739583333333
+"b1007","Information security analysts","M",0.652173913043478,2.79958333333333
+"b1010","Computer programmers","M",0.95,2.95826388888889
+"b1021","Software developers","M",0.868421052631579,3.09138888888889
+"b1031","Web developers","M",0.932692307692308,2.94826388888889
+"b1050","Computer support specialists","M",0.622863247863248,2.14572916666667
+"b1065","Database administrators and architects","N",0.802920738131325,2.587109375
+"b1105","Network and computer systems administrators","M",0.72972972972973,2.01354166666667
+"b1106","Computer network architects","M",0.635222739361702,2.3340625
+"b1220","Operations research analysts","N",0.629032258064516,3.15972222222222
+"b1230","Statisticians","N",0.724736842105263,3.43111111111111
+"b1240","Other mathematical science occupations","N",0.735876499859946,3.27237268518519
+"b1320","Aerospace engineers","M",0.571428571428571,2.83833333333333
+"b1350","Chemical engineers","M",0.461538461538462,2.60118055555556
+"b1360","Civil engineers","M",0.482142857142857,2.66502314814815
+"b1400","Computer hardware engineers","M",0.727272727272727,2.77069444444444
+"b1410","Electrical and electronics engineers","M",0.591299019607843,2.48152777777778
+"b1430","Industrial engineers, including health and safety","M",0.529292902879129,2.39183159722222
+"b1460","Mechanical engineers","M",0.531293509651923,2.25053240740741
+"b1530","Engineers, all other","M",0.522649620027669,2.20682291666667
+"b1551","Electrical and electronic engineering technologists and technicians","M",0.405660377358491,1.57055555555556
+"b1560","Surveying and mapping technicians","M",0.5,1.90958333333333
+"b1610","Biological scientists","N",0.462992942239547,2.26220920138889
+"b1650","Medical scientists","N",0.482517482517483,2.93638888888889
+"b1720","Chemists and materials scientists","N",0.431379310344828,2.15739583333333
+"b1760","Physical scientists, all other","N",0.456521739130435,2.818125
+"b1860","Miscellaneous social scientists and related workers","N",0.483152372712053,2.95408333333333
+"b1920","Chemical technicians","N",0.392857142857143,1.53277777777778
+"b1970","Other life, physical, and social science technicians","N",0.418564303832594,1.68892992424242
+"b2006","Substance abuse and behavioral disorder counselors + Educational, guidance, and career counselors and advisors + Marriage and family therapists + Mental health counselors + Rehabilitation counselors + Counselors, all other","F",0.258929888155549,2.70365983497824
+"b2014","Child, family, and school social workers + Healthcare social workers + Mental health and substance abuse social workers + Social workers, all other","F",0.295024131274131,2.52408986838913
+"b2015","Probation officers and correctional treatment specialists","N",0.394736842105263,2.15402777777778
+"b2016","Social and human service assistants","F",0.392857142857143,2.17090277777778
+"b2025","Other community and social service specialists","N",0.409824123480745,2.12144097222222
+"b2040","Clergy","M",0.333333333333333,1.88659722222222
+"b2050","Directors, religious activities and education","N",0.439393939393939,2.00368055555556
+"b2100","Lawyers","N",0.425,3.01354166666667
+"b2110","Judges, magistrates, and other judicial workers","N",0.472222222222222,2.66914351851852
+"b2145","Paralegals and legal assistants","F",0.525,2.53305555555556
+"b2205","Postsecondary teachers","N",0.484515193338831,2.70958134920635
+"b2300","Preschool and kindergarten teachers","F",0.230074719800747,1.91190972222222
+"b2310","Elementary and middle school teachers","F",0.327072514309541,2.35143518518519
+"b2320","Secondary school teachers","N",0.333333333333333,1.98913194444444
+"b2330","Special education teachers","F",0.30802392052392,2.16559722222222
+"b2360","Tutors + Other teachers and instructors","N",0.438809330686711,2.15716014688249
+"b2400","Archivists, curators, and museum technicians","N",0.412280701754386,1.91115740740741
+"b2435","Librarians and media collections specialists","F",0.535087719298246,2.33395833333333
+"b2545","Teaching assistants","F",0.387878787878788,1.99474537037037
+"b2555","Other educational instruction and library workers","F",0.404301346801347,2.18206944444444
+"b2600","Artists and related workers","N",0.427155172413793,1.90199652777778
+"b2640","Commercial and industrial designers + Fashion designers + Floral designers + Graphic designers + Interior designers + Merchandise displayers and window trimmers + Other designers","N",0.430450209691311,2.27745429384355
+"b2700","Actors","N",0.1875,1.04458333333333
+"b2710","Producers and directors","N",0.469585379159847,2.16298611111111
+"b2810","News analysts, reporters, and journalists","N",0.65,2.39611111111111
+"b2825","Public relations specialists","N",0.590909090909091,3.039375
+"b2830","Editors","N",0.647058823529412,2.67097222222222
+"b2840","Technical writers","N",0.7,2.72486111111111
+"b2850","Writers and authors","N",0.877136752136752,2.58357638888889
+"b2861","Interpreters and translators","F",0.88,2.18340277777778
+"b2910","Photographers","N",0.385416666666667,1.465
+"b2920","Television, video, and film camera operators and editors","M",0.476010101010101,1.65427083333333
+"b3000","Chiropractors","M",0.454545454545455,1.65986111111111
+"b3010","Dentists","N",0.158863636363636,1.549375
+"b3030","Dietitians and nutritionists","F",0.548780487804878,2.62902777777778
+"b3050","Pharmacists","N",0.428571428571428,1.90888888888889
+"b3100","Emergency medicine physicians + Radiologists + Other physicians + Surgeons","N",0.395735096872378,2.02927205773076
+"b3110","Physician assistants","N",0.270833333333333,1.829375
+"b3150","Occupational therapists","F",0.289015151515152,1.94430555555556
+"b3160","Physical therapists","F",0.191489361702128,1.71277777777778
+"b3220","Respiratory therapists","N",0.202380952380952,1.04423611111111
+"b3230","Speech-language pathologists","F",0.451219512195122,2.60784722222222
+"b3245","Therapists, all other","F",0.365602836879433,2.14173611111111
+"b3250","Veterinarians","N",0.27027027027027,1.71763888888889
+"b3255","Registered nurses","F",0.380190007037298,2.02616666666667
+"b3258","Nurse practitioners","F",0.481481481481481,2.30902777777778
+"b3300","Clinical laboratory technologists and technicians","F",0.254297259852217,1.59827256944444
+"b3310","Dental hygienists","F",0.1875,1.17381944444444
+"b3402","Emergency medical technicians + Paramedics","N",0.184633625182406,1.62472222222222
+"b3430","Pharmacy technicians + Psychiatric technicians + Surgical technologists + Veterinary technologists and technicians + Dietetic technicians and ophthalmic medical technicians","F",0.280097558618473,1.34262634903115
+"b3500","Licensed practical and licensed vocational nurses","F",0.25,1.609375
+"b3515","Medical records specialists","F",0.61764705882353,1.62472222222222
+"b3545","Miscellaneous health technologists and technicians","N",0.295756933041416,1.32942901234568
+"b1980","Occupational health and safety specialists and technicians","M",0.364583333333333,2.08243055555556
+"b3605","Home health aides + Nursing assistants + Orderlies and psychiatric aides","F",0.0928947631009985,1.15178922352007
+"b3620","Physical therapist assistants and aides","F",0.167832167832168,1.1903125
+"b3630","Massage therapists","F",0.0740740740740741,1.25131944444444
+"b3640","Dental assistants","F",0.266666666666667,1.13354166666667
+"b3645","Medical assistants","F",0.358974358974359,1.54430555555556
+"b3648","Veterinary assistants and laboratory animal caretakers","F",0.222222222222222,0.917847222222222
+"b3649","Phlebotomists","F",0.182926829268293,1.37590277777778
+"b3655","Other healthcare support workers","F",0.345254095898752,1.39301649305556
+"b3710","First-line supervisors of police and detectives","M",0.328947368421053,1.47618055555556
+"b3720","First-line supervisors of firefighting and prevention workers","M",0.415094339622641,0.780902777777778
+"b3735","First-line supervisors of security workers + First-line supervisors of protective service workers, all other","M",0.404761904761905,1.49916666666667
+"b3740","Firefighters","M",0.140350877192982,0.3925
+"b3802","Bailiffs + Correctional officers and jailers","M",0.24451319784112,1.44260867604618
+"b3820","Detectives and criminal investigators","M",0.397410759175465,2.248125
+"b3870","Police officers","M",0.300595238095238,1.47142361111111
+"b3910","Private detectives and investigators","N",0.388888888888889,2.25465277777778
+"b3930","Security guards and gambling surveillance officers","M",0.302083333333333,1.98420138888889
+"b4000","Chefs and head cooks","M",0.261904761904762,1.21548611111111
+"b4010","First-line supervisors of food preparation and serving workers","N",0.511111111111111,1.11972222222222
+"b4020","Cooks","N",0.0910568499534017,1.08777777777778
+"b4030","Food preparation workers","N",0.037037037037037,0.969375000000001
+"b4040","Bartenders","N",0.194444444444444,1.05097222222222
+"b4055","Fast food and counter workers","N",0.0970394736842105,0.787569444444445
+"b4110","Waiters and waitresses","N",0.183673469387755,0.754513888888889
+"b4120","Food servers, nonrestaurant","F",0.12962962962963,0.915138888888889
+"b4130","Dining room and cafeteria attendants and bartender helpers","N",0,1.00326388888889
+"b4140","Dishwashers","M",0,0.542013888888889
+"b4150","Hosts and hostesses, restaurant, lounge, and coffee shop","F",0.228571428571429,0.758680555555556
+"b4200","First-line supervisors of housekeeping and janitorial workers","N",0.26530612244898,1.07034722222222
+"b4210","First-line supervisors of landscaping, lawn service, and groundskeeping workers","M",0.354545454545455,0.932152777777778
+"b4220","Janitors and building cleaners","N",0,0.775381944444445
+"b4230","Maids and housekeeping cleaners","F",0,0.589027777777778
+"b4240","Pest control workers","M",0.25,0.939097222222223
+"b4255","Landscaping and groundskeeping workers + Tree trimmers and pruners + Other grounds maintenance workers","M",0.0275448372461253,0.229452663337495
+"b4330","Supervisors of personal care and service workers","F",0.404968821257387,1.538125
+"b4340","Animal trainers","N",0.103448275862069,1.57847222222222
+"b4350","Animal caretakers","F",0.272727272727273,1.22013888888889
+"b4400","Gambling services workers","N",0.202182952182952,1.01131944444444
+"b4435","Other entertainment attendants and related workers","N",0.181283529785834,0.949613095238096
+"b4500","Barbers","M",0.161764705882353,0.329305555555556
+"b4510","Hairdressers, hairstylists, and cosmetologists","F",0.0789473684210526,1.16854166666667
+"b4525","Manicurists and pedicurists + Skincare specialists + Other personal appearance workers","F",0.116928981356013,0.829335329242544
+"b4530","Baggage porters, bellhops, and concierges","N",0.307407407407407,1.23909722222222
+"b4540","Tour and travel guides","N",0.324615384615385,1.3640625
+"b4600","Childcare workers","F",0.141431203931204,1.27315972222222
+"b3602","Personal care aides","F",0.222222222222222,1.18104166666667
+"b4622","Exercise trainers and group fitness instructors + Recreation workers","N",0.104745469616418,1.3965022675737
+"b4700","First-line supervisors of retail sales workers","N",0.486486486486487,1.64006944444444
+"b4710","First-line supervisors of non-retail sales workers","N",0.537037037037037,2.265625
+"b4720","Cashiers","F",0.235603543743079,1.16034722222222
+"b4740","Counter and rental clerks","N",0.532258064516129,1.04430555555556
+"b4750","Parts salespersons","M",0.342857142857143,1.39104166666667
+"b4760","Retail salespersons","N",0.342105263157895,1.114375
+"b4800","Advertising sales agents","N",0.538461538461538,2.386875
+"b4810","Insurance sales agents","N",0.575757575757576,2.20618055555556
+"b4820","Securities, commodities, and financial services sales agents","N",0.605769230769231,2.82916666666667
+"b4830","Travel agents","F",0.5625,2.30694444444444
+"b4840","Sales representatives of services, except advertising, insurance, financial services, and travel","M",0.633333333333333,1.62472222222222
+"b4850","Sales representatives, wholesale and manufacturing","M",0.559501372795384,1.92107638888889
+"b4920","Real estate brokers and sales agents","N",0.46875,2.26409722222222
+"b4930","Sales engineers","M",0.511363636363636,2.73972222222222
+"b4950","Door-to-door sales workers, news and street vendors, and related workers","N",0.260869565217391,1.69923611111111
+"b5000","First-line supervisors of office and administrative support workers","N",0.489583333333333,2.18631944444444
+"b5100","Bill and account collectors","N",0.696428571428571,2.20090277777778
+"b5110","Billing and posting clerks","F",0.773809523809524,2.56631944444444
+"b5120","Bookkeeping, accounting, and auditing clerks","F",0.802325581395349,2.41479166666667
+"b5140","Payroll and timekeeping clerks","F",0.837837837837838,2.50638888888889
+"b5160","Tellers","F",0.541666666666667,1.64284722222222
+"b5220","Court, municipal, and license clerks","F",0.7,2.13875
+"b5240","Customer service representatives","N",0.568181818181818,2.20013888888889
+"b5250","Eligibility interviewers, government programs","F",0.68,2.739375
+"b5260","File Clerks","F",0.794117647058823,2.26736111111111
+"b5300","Hotel, motel, and resort desk clerks","N",0.5,1.81111111111111
+"b5310","Interviewers, except eligibility and loan","F",0.672413793103448,2.46118055555556
+"b5320","Library assistants, clerical","F",0.53448275862069,1.60104166666667
+"b5330","Loan interviewers and clerks","N",0.59375,2.32291666666667
+"b5350","Order clerks","N",0.714285714285714,2.31618055555556
+"b5360","Human resources assistants, except payroll and timekeeping","F",0.620689655172414,2.56458333333333
+"b5400","Receptionists and information clerks","F",0.533333333333333,1.73701388888889
+"b5410","Reservation and transportation ticket agents and travel clerks","N",0.457142857142857,1.42152777777778
+"b5510","Couriers and messengers","M",0.310344827586207,0.733472222222223
+"b5522","Public safety telecommunicators + Dispatchers, except police, fire, and ambulance","N",0.668405934865267,1.9597401774398
+"b5540","Postal service clerks","N",0.314814814814815,1.41361111111111
+"b5550","Postal service mail carriers","N",0.230769230769231,0.454513888888889
+"b5560","Postal service mail sorters, processors, and processing machine operators","N",0.1,0.887916666666667
+"b5600","Production, planning, and expediting clerks","N",0.596153846153846,2.21055555555556
+"b5610","Shipping, receiving, and inventory clerks","N",0.5,1.12388888888889
+"b9645","Stockers and order fillers","N",0.181818181818182,0.910555555555556
+"b5630","Weighers, measurers, checkers, and samplers, recordkeeping","N",0.293103448275862,1.346875
+"b5740","Executive secretaries and executive administrative assistants + Legal secretaries and administrative assistants + Medical secretaries and administrative assistants + Secretaries and administrative assistants, except legal, medical, and executive","F",0.646470174059029,2.02032385061674
+"b1108","Computer occupations, all other","M",0.735786186333217,2.81195601851852
+"b5810","Data entry keyers","N",0.892857142857143,2.39305555555556
+"b5840","Insurance claims and policy processing clerks","F",0.833333333333333,2.54618055555556
+"b5850","Mail clerks and mail machine operators, except postal service","N",0.216216216216216,0.661944444444445
+"b5860","Office clerks, general","F",0.575757575757576,1.77590277777778
+"b6005","First-line supervisors of farming, fishing, and forestry workers","M",0.280701754385965,0.922361111111111
+"b6050","Miscellaneous agricultural workers","M",0.068452380952381,0.486782407407408
+"b6130","Logging workers","M",0.143092105263158,0.377361111111111
+"b6200","First-line supervisors of construction trades and extraction workers","M",0.416666666666667,0.942256944444445
+"b6220","Brickmasons, blockmasons, and stonemasons","M",0.0192307692307692,0.743125
+"b6230","Carpenters","M",0.144444444444444,0.802708333333334
+"b6240","Carpet, floor, and tile installers and finishers","M",0.0553571428571429,0.754930555555556
+"b6250","Cement masons, concrete finishers, and terrazzo workers","M",0,0.4425
+"b6260","Construction laborers","M",0.05,0.697361111111111
+"b6305","Construction equipment operators","M",0.0181159420289855,0.38337962962963
+"b6330","Drywall installers, ceiling tile installers, and tapers","M",0.0208333333333333,0.6290625
+"b6355","Electricians","M",0.146341463414634,0.90138888888889
+"b6400","Insulation workers","M",0.0477272727272727,0.592083333333334
+"b6410","Painters and paperhangers","M",0.0420849420849421,0.628333333333334
+"b6442","Pipelayers + Plumbers, pipefitters, and steamfitters","M",0.0722054478133617,0.863971341054045
+"b6515","Roofers","M",0.04,0.559444444444445
+"b6520","Sheet metal workers","M",0.0657894736842105,0.769930555555556
+"b6530","Structural iron and steel workers","M",0.0285714285714286,0.498055555555556
+"b6600","Helpers, construction trades","M",0.0040650406504065,0.581006944444445
+"b6660","Construction and building inspectors","M",0.334104289318755,1.71163194444444
+"b6730","Highway maintenance workers","M",0.0161290322580645,0.804027777777778
+"b6950","Other extraction workers","M",0.0407589084905412,0.3803125
+"b7000","First-line supervisors of mechanics, installers, and repairers","M",0.41025641025641,1.24680555555556
+"b7010","Computer, automated teller, and office machine repairers","M",0.36734693877551,0.747291666666667
+"b7020","Radio and telecommunications equipment installers and repairers","M",0.194196428571429,0.989513888888889
+"b7130","Security and fire alarm systems installers","M",0.166666666666667,0.968541666666667
+"b7140","Aircraft mechanics and service technicians","M",0.134328358208955,0.904097222222223
+"b7150","Automotive body and related repairers","M",0.0425531914893617,0.937916666666667
+"b7200","Automotive service technicians and mechanics","M",0.0818181818181818,0.595694444444445
+"b7210","Bus and truck mechanics and diesel engine specialists","M",0,0.480625
+"b7220","Heavy vehicle and mobile equipment service technicians and mechanics","M",0.104052936311001,0.488819444444445
+"b7240","Small engine mechanics","M",0.0851648351648352,0.521412037037037
+"b7260","Miscellaneous vehicle and mobile equipment mechanics, installers, and repairers","M",0.0546847788227098,0.544398148148149
+"b7315","Heating, air conditioning, and refrigeration mechanics and installers","M",0.105263157894737,0.649305555555556
+"b7330","Industrial and refractory machinery mechanics","M",0.109697455419756,0.710746527777778
+"b7340","Maintenance and repair workers, general","M",0.137254901960784,0.619791666666667
+"b7410","Electrical power-line installers and repairers","M",0,0.0798611111111112
+"b7420","Telecommunications line installers and repairers","M",0.03125,0.684861111111112
+"b7430","Precision instrument and equipment repairers","M",0.19065953654189,0.833489583333334
+"b7640","Other installation, maintenance, and repair workers","M",0.108119018078695,0.608637152777778
+"b7700","First-line supervisors of production and operating workers","M",0.4,1.41020833333333
+"b7720","Electrical, electronics, and electromechanical assemblers","N",0.121276871276871,0.962476851851852
+"b7750","Other assemblers and fabricators","N",0.0914359369751527,0.848495370370371
+"b7800","Bakers","N",0.264705882352941,1.09847222222222
+"b7810","Butchers and other meat, poultry, and fish processing workers","M",0.043859649122807,0.732824074074074
+"b7840","Food batchmakers","N",0.115384615384615,0.941944444444445
+"b7905","Computer numerically controlled tool operators and programmers","M",0.526785714285714,1.003125
+"b7950","Cutting, punching, and press machine setters, operators, and tenders, metal and plastic","M",0.01,0.570208333333334
+"b8030","Machinists","M",0.23469387755102,0.875347222222223
+"b8225","Other metal workers and plastic workers","M",0.103089830212288,0.775939009661836
+"b8140","Welding, soldering, and brazing workers","M",0.0782085561497326,0.675555555555556
+"b8255","Printing press operators","M",0.2875,0.582430555555556
+"b8300","Laundry and dry-cleaning workers","F",0.05,0.316041666666667
+"b8320","Sewing machine operators","N",0.0813953488372093,0.634791666666667
+"b8350","Tailors, dressmakers, and sewers","F",0.0662878787878788,0.781979166666667
+"b8500","Cabinetmakers and bench carpenters","M",0.117647058823529,0.486944444444445
+"b8610","Stationary engineers and boiler operators","M",0.162790697674419,0.83888888888889
+"b8620","Water and wastewater treatment plant and system operators","M",0.125,1.01
+"b8640","Chemical processing machine setters, operators, and tenders","M",0.147515527950311,0.9215625
+"b8650","Crushing, grinding, polishing, mixing, and blending workers","M",0.084977834977835,0.679027777777778
+"b8710","Cutting workers","M",0.0340909090909091,0.678055555555556
+"b8740","Inspectors, testers, sorters, samplers, and weighers","N",0.416666666666667,1.12423611111111
+"b8750","Jewelers and precious stone and metal workers","N",0.205357142857143,1.09701388888889
+"b8760","Dental and ophthalmic laboratory technicians and medical appliance technicians","N",0.0911159003831418,1.22488425925926
+"b8800","Packaging and filling machine operators and tenders","N",0,0.933541666666667
+"b8810","Painting workers","M",0.0217391304347826,1.03760416666667
+"b8950","Helpers--production workers","N",0.0888888888888889,0.366944444444445
+"b9005","Supervisors of transportation and material moving workers","M",0.315508709882576,1.46767361111111
+"b9030","Aircraft pilots and flight engineers","M",0.295454545454545,1.17260416666667
+"b9050","Flight attendants","N",0.166666666666667,0.94138888888889
+"b9122","Bus drivers, school + Bus drivers, transit and intercity","N",0.282553200853854,0.709043911335578
+"b9130","Driver/sales workers and truck drivers","M",0.325854700854701,0.498495370370371
+"b9142","Taxi drivers","M",0.28125,0.673287037037038
+"b9210","Locomotive engineers and operators","M",0.24512987012987,0.758645833333334
+"b9350","Parking attendants","M",0.107142857142857,0.668055555555556
+"b9365","Transportation service attendants","M",0.134661835748792,0.568680555555556
+"b9510","Crane and tower operators","M",0.184210526315789,0.501597222222223
+"b9600","Industrial truck and tractor operators","M",0.03125,0.5675
+"b9610","Cleaners of vehicles and equipment","M",0.0833333333333333,0.592013888888889
+"b9620","Laborers and freight, stock, and material movers, hand","M",0.0417391304347826,0.662430555555556
+"b9640","Packers and packagers, hand","N",0.1,0.760833333333334
+"b9720","Refuse and recyclable material collectors","M",0.196428571428571,0
+"b9760","Other material moving workers","M",0.0714285714285714,0.970763888888889

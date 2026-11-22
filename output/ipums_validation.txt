@@ -1,0 +1,8 @@
+IPUMS CPS (cps_00002, basic monthly, WTFINL annual average) vs BLS CPS Table 11, 309 sample units
+  2015: total 138671k IPUMS vs 138170k Table 11 (ratio 1.0036); unit-level correlation r = 0.9999; median |diff| 0.3%
+  2019: total 146913k IPUMS vs 146165k Table 11 (ratio 1.0051); unit-level correlation r = 0.9999; median |diff| 0.4%
+  2022: total 148537k IPUMS vs 147871k Table 11 (ratio 1.0045); unit-level correlation r = 0.9999; median |diff| 0.3%
+  2022 % women: unit-level correlation r = 0.9999; median |diff| 0.06 pp (2 units with no IPUMS employment in 2022: Statisticians; Judges, magistrates, and other judicial workers)
+  Units that would switch gender group on IPUMS 2022 % women: 1 across the 70% line, 1 across the 30% line
+  2024: total 150945k IPUMS vs 150186k Table 11 (ratio 1.0051); unit-level correlation r = 0.9999; median |diff| 0.4%
+  2025: total 152618k IPUMS vs 151618k Table 11 (ratio 1.0066); unit-level correlation r = 0.9999; median |diff| 0.5%

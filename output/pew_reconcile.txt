@@ -1,0 +1,58 @@
+Reconciling with Pew Research Center (Smith, Oct 22 2026) -- written by R/15_pew_reconcile.R
+
+Pew exposure index rebuilt from O*NET 30.3 (894 occupations); 3 of 309 units had no match and got the median.
+Correlation across the 309 units: Eloundou GPT-4 beta vs Pew-rebuilt index r = 0.81 (employment-weighted r = 0.77).
+
+A. PEW-STYLE SLOPES: annualized employment growth 2022-25 (pp/yr) per 1 SD of exposure
+   weighted by pre-2020 (2017-19) employment, HC1 SEs. gap = women - men (Pew's sign).
+   sample   exposure          men    women      gap     SE       p    n
+   All 16+  Eloundou        -0.03    -0.09    -0.05   0.62   0.937  302
+   All 16+  Pew-rebuilt     +0.03    +0.43    +0.41   0.53   0.443  302
+   BA+      Eloundou        -0.73    -2.86    -2.07   1.53   0.177  287
+   BA+      Pew-rebuilt     -1.05    -2.24    -1.13   1.44   0.432  287
+   No BA    Eloundou        -0.16    -0.96    -0.79   0.95   0.407  290
+   No BA    Pew-rebuilt     +0.08    -0.22    -0.30   0.80   0.707  290
+
+B. THE THREE CHOICES, EACH SWITCHED (women's side - men's side; + = women did better)
+   Occupation groups: HEF - HEM gap among top-25% units on that exposure, pp/yr, 2022 weights.
+   Workers: slope of (women's - men's annualized growth within each occupation) per 1 SD exposure, pp/yr,
+            pre-2020 weights. Pre-period: subtract the same quantity for 2015-19.
+    #  unit               exposure     pre-period estimate     SE       p  n
+    1  Occupation groups  Eloundou     2015-19       +2.53   2.09   0.229  F=21 M=19   <- our headline (IPUMS)
+    2  Workers            Eloundou     2015-19       +1.31   0.69   0.059  302 occupations
+    3  Occupation groups  Pew-rebuilt  2015-19       +1.98   2.14   0.358  F=16 M=16
+    4  Workers            Pew-rebuilt  2015-19       +1.68   0.65   0.010  302 occupations
+    5  Occupation groups  Eloundou     none          -1.11   2.19   0.612  F=21 M=19
+    6  Workers            Eloundou     none          -0.05   0.62   0.937  302 occupations
+    7  Occupation groups  Pew-rebuilt  none          -0.22   1.54   0.884  F=16 M=16
+    8  Workers            Pew-rebuilt  none          +0.41   0.53   0.443  302 occupations   <- Pew-style growth slope (Pew's own model: Part C)
+
+   Switching ONE choice at a time, starting from our headline (#1, +2.53):
+     unit      -> #2: +1.31  same sign
+     exposure  -> #3: +1.98  same sign
+     pre       -> #5: -1.11  SIGN FLIPS
+   Switching ONE choice at a time, starting from Pew-style (#8, +0.41):
+     unit      -> #7: -0.22  SIGN FLIPS
+     exposure  -> #6: -0.05  SIGN FLIPS
+     pre       -> #4: +1.68  same sign
+   Signs across all 8: #1 +, #2 +, #3 +, #4 +, #5 -, #6 -, #7 -, #8 +
+
+C. PEW'S MODEL ON OUR DATA: log employment by occupation x sex x year, 2017-19 vs 2023-25,
+   occupation and year FE, pre-2020 weights, SEs clustered by occupation. % change, women - men (beta3).
+   Pew reports -5% per SD (-6% per point) with 2023 - mid-2026 data.
+   Eloundou     per 1 SD    gap  -4.49% [ -7.64,  -1.24] p = 0.007 | men  +2.94%, women  -1.68%
+   Pew-rebuilt  per 1 SD    gap  -3.01% [ -5.87,  -0.06] p = 0.046 | men  +4.19%, women  +1.06%
+   Pew-rebuilt  per 1 point gap  -3.52% [ -6.85,  -0.07] p = 0.046 | men  +4.93%, women  +1.24%
+   Dropped occupation x sex x year cells with zero employment: 50
+
+D. WHERE PEW'S NEGATIVE GAP COMES FROM: Pew's model, different windows (% per 1 SD, women - men)
+   Pew's 2017-19 is a baseline level, so its gap spans 2020-22 even though those years are omitted.
+   2017-19 -> 2023-25 (Pew's window)              Eloundou      -4.49% [ -7.64,  -1.24] p = 0.007
+   2017-19 -> 2023-25 (Pew's window)              Pew-rebuilt   -3.01% [ -5.87,  -0.06] p = 0.046
+   2017-19 -> 2022 (spans COVID + code change)    Eloundou      -3.70% [ -7.23,  -0.03] p = 0.048
+   2017-19 -> 2022 (spans COVID + code change)    Pew-rebuilt   -3.35% [ -6.51,  -0.09] p = 0.044
+   2022 -> 2023-25 (post-ChatGPT only)            Eloundou      -0.84% [ -3.50,  +1.90] p = 0.546
+   2022 -> 2023-25 (post-ChatGPT only)            Pew-rebuilt   +0.35% [ -2.03,  +2.78] p = 0.775
+   2017-19 -> 2023-25, code-change units dropped  Eloundou      -4.15% [ -7.38,  -0.81] p = 0.015
+   2017-19 -> 2023-25, code-change units dropped  Pew-rebuilt   -2.70% [ -5.61,  +0.29] p = 0.077
+   Code-change units dropped: 23 of 309 (Check 4 rule, |2022/2019 - 1| > 0.5).
