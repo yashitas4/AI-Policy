@@ -27,6 +27,7 @@ Run them in this order, or run everything with `source("R/00_run_all.R")`. Later
 | `bls/t11_2018codes_2022_2024.tsv` | BLS Table 11, 2022 (employment, % women) and 2024 (employment). Rows follow the same order as the 2025 file. Extracted from bls.gov `cpsaat11.htm` for 2022 and 2024 |
 | `bls/t11_2010codes_2016_2018.tsv` | BLS Table 11, 2016, 2017 and 2018 (employment). Rows follow the same order as the 2015/2019 file. Used only by `03_annual_gap.R` |
 | `bls/t11_2018codes_2020_2021_2023.tsv` | BLS Table 11, 2020, 2021 and 2023 (employment). Rows follow the same order as the 2025 file. Used only by `03_annual_gap.R` |
+| `bls/education.xlsx` | BLS Employment Projections, education tables (downloaded as-is from bls.gov/emp/ind-occ-matrix/education.xlsx, Nov 22, 2026). Sheet "Table 5.3": educational attainment of workers 25+ by occupation, 2023–24. Matches the bls.gov web table in all 832 rows. Used only by `09_education_split.R` |
 | `2018-occupation-code-list-and-crosswalk.xlsx` | U.S. Census Bureau, 2018 occupation code list and 2010→2018 crosswalk |
 | `eloundou/occ_level.csv` | Eloundou et al. (2024), occupation-level exposure scores (github.com/openai/GPTs-are-GPTs) |
 
