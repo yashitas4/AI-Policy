@@ -53,6 +53,18 @@ Pre-period growth uses 2010 Census codes and post-period growth uses 2018 codes.
 
 Script: `R/07_codechange_robustness.R`.
 
+## Check 5: tech-slowdown confound (pass standard written 2026-11-22, before running)
+
+Most HEM units are computer or engineering jobs, so the gap could reflect the tech-hiring cycle rather than gender. SOC major groups come from each unit's 2018 SOC codes, as in `R/04_within_group_gap.R`.
+
+- **Re-estimate 1:** the main gap with these units removed from HEM: all Computer and mathematical occupations (SOC 15) and Computer and information systems managers (SOC 11-3021). HEF is unchanged.
+- **Re-estimate 2:** the main gap with HEF compared only with HEM units in Architecture and engineering (SOC 17) and Sales and related (SOC 41). HEF is unchanged.
+- **Everything else** stays as in the baseline: gender groups, the high-exposure cutoff (β ≥ 0.511), 2022 employment weights and HC1 standard errors.
+- **Pass standard:** the gap's sign doesn't flip. The baseline is +2.45, so both re-estimates must be > 0. If either is ≤ 0, the check fails.
+- **Also reported:** HEF and HEM units by SOC major group, with each group's share of 2022 employment.
+
+Script: `R/08_tech_confound.R`.
+
 ## Note
 
 This pipeline was rebuilt from public sources by Claude (Anthropic) in November 2026, because the original scripts were not available. Its numbers differ from earlier drafts. See `output/checks_summary.txt`.
